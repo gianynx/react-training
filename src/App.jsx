@@ -53,7 +53,7 @@ function App() {
         </div>
         <div className="mx-5">
           <Card imgSrc={viteLogo} title="Vite logo">
-            <p>Vite is a build tool that manages the development and build process ("engine") of a web application.</p>
+            <p>Vite is a build tool that manages the development and build process (&quot;engine&quot;) of a web application.</p>
           </Card>
         </div>
       </div>
