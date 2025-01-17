@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import AppHook from './hooks/AppHook';
+import useAppHook from './hooks/appHook';
 import reactLogo from '/react.svg';
 import viteLogo from '/vite.svg';
 import Navbar from './components/Navbar';
@@ -8,7 +8,7 @@ import './assets/css/App.css';
 
 function App() {
   const [count, setCount] = useState(0);
-  const { h1Title, h1Style, h2Title, boxPosition, img } = AppHook();
+  const { h1Title, h1Style, h2Title, boxPosition, img } = useAppHook();
 
   return (
     <>
