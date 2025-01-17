@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import AppHook from './hooks/AppHook';
 import reactLogo from '/react.svg';
 import viteLogo from '/vite.svg';
 import Navbar from './components/Navbar';
@@ -7,15 +8,7 @@ import './assets/css/App.css';
 
 function App() {
   const [count, setCount] = useState(0);
-
-  const h1Title = "React Training";
-  const h1Style = {
-    color: "black",
-    fontSize: "3.3rem",
-  };
-  const h2Title = "Full-time Course";
-  const boxPosition = 2;
-  const img = 'react';
+  const { h1Title, h1Style, h2Title, boxPosition, img } = AppHook();
 
   return (
     <>
