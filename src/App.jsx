@@ -41,12 +41,12 @@ function App() {
       <div className="d-flex justify-content-center mt-5 mb-5">
         <div className="mx-5">
           <Card imgSrc={reactLogo} title="React logo">
-            <p>React is a JavaScript library for building user interfaces.</p>
+            React is a JavaScript library for building user interfaces.
           </Card>
         </div>
         <div className="mx-5">
           <Card imgSrc={viteLogo} title="Vite logo">
-            <p>Vite is a build tool that manages the development and build process (&quot;engine&quot;) of a web application.</p>
+            Vite is a build tool that manages the development and build process (&quot;engine&quot;) of a web application.
           </Card>
         </div>
       </div>
