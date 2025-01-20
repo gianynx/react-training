@@ -2,14 +2,13 @@ import { useState } from 'react';
 import useAppHook from './hooks/appHook';
 import reactLogo from '/react.svg';
 import viteLogo from '/vite.svg';
-import cobolLogo from '/cobol.png';
 import Navbar from './components/Navbar';
 import Card from './components/Card';
 import './assets/css/App.css';
 
 function App() {
   const [count, setCount] = useState(0);
-  const { h1Title, h1Style, h2Title, boxPosition, img } = useAppHook();
+  const { h1Title, h1Style, h2Title, boxPosition, img, technologies } = useAppHook();
 
   return (
     <>
@@ -41,17 +40,12 @@ function App() {
       </div>
       <div className="p-4">
         <hr />
-        <h2 className="text-center fw-semibold text-white mt-5">Some Technologies</h2>
         <div className="d-flex justify-content-center gap-5 mt-5 mb-2">
-          <Card imgSrc={reactLogo} title="React logo" isPopular={true}>
-            React is a JavaScript library for building user interfaces.
-          </Card>
-          <Card imgSrc={viteLogo} title="Vite logo" isPopular={true}>
-            Vite is a build tool that manages the development and build process (&quot;engine&quot;) of a web application.
-          </Card>
-          <Card imgSrc={cobolLogo} title="Cobol logo" isPopular={false}>
-            COBOL is a historical programming language, designed for commercial and administrative applications.
-          </Card>
+          {technologies.map((tech) => (
+            <Card key={tech.id} imgSrc={tech.imgSrc} title={tech.title} isPopular={tech.isPopular}>
+              {tech.description}
+            </Card>
+          ))}
         </div>
       </div>
     </>
