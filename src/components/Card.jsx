@@ -8,7 +8,7 @@ function Card({ title, imgSrc, children, isPopular }) {
             </div>
             <button className="btn btn-dark mt-4">Click me!</button>
             <div className="d-flex justify-content-center mt-4">
-                {popularLabel}
+                <span className="fw-bold">{popularLabel}</span>
             </div>
             <div className="card-body text-center">
                 <h5 className="card-title fw-bold">{title}</h5>
