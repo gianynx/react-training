@@ -14,7 +14,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <div className="d-flex justify-content-evenly align-items-center mt-5">
+      <div className="d-flex justify-content-evenly align-items-center mt-5 p-3">
         <div className={`box rounded-5 p-4 ${boxPosition > 1 ? "rotated" : ""}`}>
           <div className="d-flex align-items-center">
             <div>
@@ -39,16 +39,20 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="d-flex justify-content-center gap-5 mt-5 mb-2">
-        <Card imgSrc={reactLogo} title="React logo" isPopular={true}>
-          React is a JavaScript library for building user interfaces.
-        </Card>
-        <Card imgSrc={viteLogo} title="Vite logo" isPopular={true}>
-          Vite is a build tool that manages the development and build process (&quot;engine&quot;) of a web application.
-        </Card>
-        <Card imgSrc={cobolLogo} title="Cobol logo" isPopular={false}>
-          COBOL is a historical programming language, designed for commercial and administrative applications.
-        </Card>
+      <div className="p-4">
+        <hr />
+        <h2 className="text-center fw-semibold text-white mt-5">Some Technologies</h2>
+        <div className="d-flex justify-content-center gap-5 mt-5 mb-2">
+          <Card imgSrc={reactLogo} title="React logo" isPopular={true}>
+            React is a JavaScript library for building user interfaces.
+          </Card>
+          <Card imgSrc={viteLogo} title="Vite logo" isPopular={true}>
+            Vite is a build tool that manages the development and build process (&quot;engine&quot;) of a web application.
+          </Card>
+          <Card imgSrc={cobolLogo} title="Cobol logo" isPopular={false}>
+            COBOL is a historical programming language, designed for commercial and administrative applications.
+          </Card>
+        </div>
       </div>
     </>
   );
