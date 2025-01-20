@@ -4,6 +4,15 @@ export interface AppHookData {
     h2Title: string;
     boxPosition: number;
     img: string;
+    technologies: Technology[];
+}
+
+export interface Technology {
+    id: string;
+    title: string;
+    imgSrc: string;
+    isPopular: boolean;
+    description: string;
 }
 
 export default AppHookData;
