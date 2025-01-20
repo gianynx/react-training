@@ -28,7 +28,7 @@ const useAppHook = (): AppHookData => {
         {
             id: "cobol",
             title: "Cobol logo",
-            imgSrc: "/cobol.svg",
+            imgSrc: "/cobol.png",
             isPopular: false,
             description: "COBOL is a historical programming language, designed for commercial and administrative applications.",
         },
