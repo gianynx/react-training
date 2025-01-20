@@ -2,6 +2,7 @@ import { useState } from 'react';
 import useAppHook from './hooks/appHook';
 import reactLogo from '/react.svg';
 import viteLogo from '/vite.svg';
+import cobolLogo from '/cobol.png';
 import Navbar from './components/Navbar';
 import Card from './components/Card';
 import './assets/css/App.css';
@@ -38,17 +39,16 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="d-flex justify-content-center mt-5 mb-5">
-        <div className="mx-5">
-          <Card imgSrc={reactLogo} title="React logo" isVisited={true}>
-            React is a JavaScript library for building user interfaces.
-          </Card>
-        </div>
-        <div className="mx-5">
-          <Card imgSrc={viteLogo} title="Vite logo" isVisited={false}>
-            Vite is a build tool that manages the development and build process (&quot;engine&quot;) of a web application.
-          </Card>
-        </div>
+      <div className="d-flex justify-content-center gap-5 mt-5 mb-2">
+        <Card imgSrc={reactLogo} title="React logo" isPopular={true}>
+          React is a JavaScript library for building user interfaces.
+        </Card>
+        <Card imgSrc={viteLogo} title="Vite logo" isPopular={true}>
+          Vite is a build tool that manages the development and build process (&quot;engine&quot;) of a web application.
+        </Card>
+        <Card imgSrc={cobolLogo} title="Cobol logo" isPopular={false}>
+          COBOL is a historical programming language, designed for commercial and administrative applications.
+        </Card>
       </div>
     </>
   );
