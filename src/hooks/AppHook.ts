@@ -16,7 +16,7 @@ const useAppHook = (): AppHookData => {
             title: "React",
             imgSrc: "/react.svg",
             isPopular: true,
-            description: "React is a JavaScript library for building user interfaces.",
+            description: "React is a popular JavaScript library for building user interfaces, particularly single-page applications.",
         },
         {
             id: "vite",
