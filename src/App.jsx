@@ -13,6 +13,7 @@ function App() {
   return (
     <>
       <Navbar />
+
       <div className="d-flex justify-content-evenly align-items-center mt-5 p-3">
         <div className={`box rounded-5 p-4 ${boxPosition > 1 ? "rotated" : ""}`}>
           <div className="d-flex align-items-center">
@@ -38,6 +39,7 @@ function App() {
           </div>
         </div>
       </div>
+
       <div className="p-4">
         <hr />
         <div className="d-flex justify-content-center gap-5 mt-5 mb-2">
