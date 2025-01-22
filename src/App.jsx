@@ -50,6 +50,19 @@ function App() {
           ))}
         </div>
       </div>
+
+      <div className="p-2">
+        <hr />
+        <div className="d-flex justify-content-center gap-5 mt-5 mb-2">
+          {technologies
+            .filter((tech) => tech.isPopular)
+            .map((tech) => (
+              <Card key={tech.id} imgSrc={tech.imgSrc} title={tech.title} isPopular={tech.isPopular}>
+                {tech.description}
+              </Card>
+            ))}
+        </div>
+      </div>
     </>
   );
 }
