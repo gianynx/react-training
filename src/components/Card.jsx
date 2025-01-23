@@ -5,7 +5,7 @@ function Card({ title, imgSrc, children, isPopular, isJsFramework }) {
     return (
         <div className="card" style={{ width: "18rem" }}>
             <div className="d-flex justify-content-center align-items-center" style={{ height: "12rem" }}>
-                <img src={imgSrc} className="card-img-top" alt={title} style={{ width: "12rem", height: "12rem" }} />
+                <img src={imgSrc} className="card-img-top" alt={title} />
             </div>
             <button className="btn btn-dark mt-4">Click me!</button>
             <div className="text-center mt-4">
