@@ -5,6 +5,7 @@ export interface AppHookData {
     boxPosition: number;
     img: string;
     technologies: Technology[];
+    handleClick: () => void;
 }
 
 export interface Technology {
