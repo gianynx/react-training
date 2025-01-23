@@ -8,7 +8,7 @@ import './assets/css/App.css';
 
 function App() {
   const [count, setCount] = useState(0);
-  const { h1Title, h1Style, h2Title, boxPosition, img, technologies } = useAppHook();
+  const { h1Title, h1Style, h2Title, boxPosition, img, technologies, handleClick } = useAppHook();
 
   return (
     <>
@@ -68,12 +68,19 @@ function App() {
         <hr />
         <div className="d-flex justify-content-center gap-5 mt-5 mb-2">
           {technologies
-            .filter((tech) => tech.isJsFramework)
+            .filter((tech) => tech.isPopular && tech.isJsFramework)
             .map((tech) => (
               <Card key={tech.id} imgSrc={tech.imgSrc} title={tech.title} isPopular={tech.isPopular} isJsFramework={tech.isJsFramework}>
                 {tech.description}
               </Card>
             ))}
+        </div>
+      </div>
+
+      <div className='p-2'>
+        <hr />
+        <div className="d-flex justify-content-center gap-5 mt-5 mb-2">
+          <button onClick={handleClick}>Click me!</button>
         </div>
       </div>
     </>
