@@ -1,6 +1,6 @@
 function Card({ title, imgSrc, children, isPopular, isJsFramework }) {
-    const popularLabel = isPopular ? <p className="text-success">&#10003; Popular</p> : <p className="text-danger mx-3">&#10007; Popular</p>
-    const jsFrameworkLabel = isJsFramework ? <p className="text-success">&#10003; JavaScript Framework</p> : ""
+    const popularLabel = isPopular ? <span className="text-success">&#10003; Popular</span> : <span className="text-danger mx-3">&#10007; Popular</span>
+    const jsFrameworkLabel = isJsFramework ? <span className="text-success">&#10003; JavaScript Framework</span> : ""
 
     return (
         <div className="card" style={{ width: "18rem" }}>
