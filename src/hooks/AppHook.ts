@@ -57,7 +57,11 @@ const useAppHook = (): AppHookData => {
         alert("Hello World!");
     }
 
-    return { h1Title, h1Style, h2Title, boxPosition, img, technologies, handleClick };
+    function handleChange(e: React.ChangeEvent<HTMLInputElement>): void {
+        console.log(e.target.value);
+    }
+
+    return { h1Title, h1Style, h2Title, boxPosition, img, technologies, handleClick, handleChange };
 }
 
 export default useAppHook;
