@@ -53,7 +53,11 @@ const useAppHook = (): AppHookData => {
         },
     ];
 
-    return { h1Title, h1Style, h2Title, boxPosition, img, technologies };
+    function handleClick() {
+        alert("Hello World!");
+    }
+
+    return { h1Title, h1Style, h2Title, boxPosition, img, technologies, handleClick };
 }
 
 export default useAppHook;
