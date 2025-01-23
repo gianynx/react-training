@@ -35,6 +35,15 @@
 .card {
   padding: 2em;
 }
+.card:hover {
+  background-color: #f0efeb;
+  cursor: pointer;
+}
+.card-img-top {
+  width: 100%;
+  height: 15em;
+  object-fit: contain;
+}
 
 .read-the-docs {
   color: #888;
