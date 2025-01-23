@@ -8,7 +8,7 @@ import './assets/css/App.css';
 
 function App() {
   const [count, setCount] = useState(0);
-  const { h1Title, h1Style, h2Title, boxPosition, img, technologies, handleClick } = useAppHook();
+  const { h1Title, h1Style, h2Title, boxPosition, img, technologies, handleClick, handleChange } = useAppHook();
 
   return (
     <>
@@ -81,6 +81,7 @@ function App() {
         <hr />
         <div className="d-flex justify-content-center gap-5 mt-5 mb-2">
           <button onClick={handleClick}>Click me!</button>
+          <input className="form-control w-25" type="text" onClick={handleChange} placeholder="Type here"></input>
         </div>
       </div>
     </>
