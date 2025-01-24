@@ -80,8 +80,26 @@ function App() {
       <div className='p-2'>
         <hr />
         <div className="d-flex justify-content-center gap-5 mt-5 mb-2">
-          <button onClick={handleClick}>Click me!</button>
-          <input className="form-control w-25" type="text" onClick={handleChange} placeholder="Type here"></input>
+          <form className="w-50">
+            <div className="mb-3">
+              <label htmlFor="exampleInputName" className="form-label text-white">Name</label>
+              <input type="text" id="exampleInputName" name="exampleInputName" className="form-control" onChange={handleChange} />
+            </div>
+            <div className="mb-3">
+              <label htmlFor="exampleInputEmail" className="form-label text-white">Email address</label>
+              <input type="email" className="form-control" id="exampleInputEmail" aria-describedby="emailHelp" />
+              <div id="emailHelp" className="form-text text-white">We&apos;ll never share your email with anyone else.</div>
+            </div>
+            <div className="mb-3">
+              <label htmlFor="exampleInputPassword" className="form-label text-white">Password</label>
+              <input type="password" className="form-control" id="exampleInputPassword" />
+            </div>
+            <div className="mb-3 form-check">
+              <input type="checkbox" className="form-check-input" id="exampleCheck" />
+              <label className="form-check-label text-white" htmlFor="exampleCheck">Check me out</label>
+            </div>
+            <button type="submit" onClick={handleClick}>Submit</button>
+          </form>
         </div>
       </div>
     </>
