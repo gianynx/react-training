@@ -5,7 +5,7 @@ export interface AppHookData {
     boxPosition: number;
     img: string;
     technologies: Technology[];
-    handleClick: () => void;
+    handleSubmit: (e: any) => void;
     handleChange: (e: any) => void;
 }
 
