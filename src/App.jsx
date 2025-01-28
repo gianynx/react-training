@@ -8,7 +8,7 @@ import './assets/css/App.css';
 
 function App() {
   const [count, setCount] = useState(0);
-  const { h1Title, h1Style, h2Title, boxPosition, img, technologies, handleClick, handleChange } = useAppHook();
+  const { h1Title, h1Style, h2Title, boxPosition, img, technologies, handleSubmit, handleChange } = useAppHook();
 
   return (
     <>
@@ -80,7 +80,7 @@ function App() {
       <div className='p-2'>
         <hr />
         <div className="d-flex justify-content-center gap-5 mt-5 mb-2">
-          <form className="w-50">
+          <form className="w-50" onSubmit={handleSubmit}>
             <div className="mb-3">
               <label htmlFor="exampleInputName" className="form-label text-white">Name</label>
               <input type="text" id="exampleInputName" name="exampleInputName" className="form-control" onChange={handleChange} />
@@ -98,7 +98,7 @@ function App() {
               <input type="checkbox" className="form-check-input" id="exampleCheck" />
               <label className="form-check-label text-white" htmlFor="exampleCheck">Check me out</label>
             </div>
-            <button type="submit" onClick={handleClick}>Submit</button>
+            <button type="submit">Click me!</button>
           </form>
         </div>
       </div>
