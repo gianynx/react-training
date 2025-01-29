@@ -1,8 +1,9 @@
 import Link from './Link';
+import '../assets/css/Navbar.css';
 
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary p-4">
+    <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top p-4">
       <div className="container-fluid">
         <a className="navbar-brand" href="/">
           React Navbar
