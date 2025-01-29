@@ -17,102 +17,104 @@ function App() {
         <Navbar />
       </header>
 
-      <main>
-        <div className="container">
-          <div className="d-flex justify-content-evenly align-items-center mt-5 p-3">
-            <div className={`box rounded-5 p-4 ${boxPosition > 1 ? "rotated" : ""}`}>
-              <div className="d-flex align-items-center">
-                <div>
-                  <h1 style={h1Style}>{h1Title}</h1>
-                  <h2 className="h2-style">{h2Title}</h2>
+      <div className="content">
+        <main>
+          <div className="container">
+            <div className="d-flex justify-content-evenly align-items-center mt-5 p-3">
+              <div className={`box rounded-5 p-4 ${boxPosition > 1 ? "rotated" : ""}`}>
+                <div className="d-flex align-items-center">
+                  <div>
+                    <h1 style={h1Style}>{h1Title}</h1>
+                    <h2 className="h2-style">{h2Title}</h2>
+                  </div>
+                  <img src={`/${img}.svg`} alt="React logo" className="mx-3" style={{ height: "100px" }} />
                 </div>
-                <img src={`/${img}.svg`} alt="React logo" className="mx-3" style={{ height: "100px" }} />
+              </div>
+              <div>
+                <a href="https://vite.dev" target="_blank">
+                  <img src={viteLogo} className="logo" alt="Vite logo" style={{ height: "10rem" }} />
+                </a>
+                <a href="https://react.dev" target="_blank">
+                  <img src={reactLogo} className="logo react" alt="React logo" style={{ height: "10rem" }} />
+                </a>
+              </div>
+              <div>
+                <h1 className="text-white">Vite + React</h1>
+                <div className="card">
+                  <button onClick={() => setCount((count) => count + 1)}>Count is {count}</button>
+                </div>
               </div>
             </div>
-            <div>
-              <a href="https://vite.dev" target="_blank">
-                <img src={viteLogo} className="logo" alt="Vite logo" style={{ height: "10rem" }} />
-              </a>
-              <a href="https://react.dev" target="_blank">
-                <img src={reactLogo} className="logo react" alt="React logo" style={{ height: "10rem" }} />
-              </a>
-            </div>
-            <div>
-              <h1 className="text-white">Vite + React</h1>
-              <div className="card">
-                <button onClick={() => setCount((count) => count + 1)}>Count is {count}</button>
-              </div>
-            </div>
-          </div>
 
-          <div className="p-4">
-            <hr />
-            <div className="d-flex justify-content-center gap-5 mt-5 mb-2">
-              {technologies.map((tech) => (
-                <Card key={tech.id} imgSrc={tech.imgSrc} title={tech.title} isPopular={tech.isPopular}>
-                  {tech.description}
-                </Card>
-              ))}
-            </div>
-          </div>
-
-          <div className="p-2">
-            <hr />
-            <div className="d-flex justify-content-center gap-5 mt-5 mb-2">
-              {technologies
-                .filter((tech) => tech.isPopular)
-                .map((tech) => (
+            <div className="p-4">
+              <hr />
+              <div className="d-flex justify-content-center gap-5 mt-5 mb-2">
+                {technologies.map((tech) => (
                   <Card key={tech.id} imgSrc={tech.imgSrc} title={tech.title} isPopular={tech.isPopular}>
                     {tech.description}
                   </Card>
                 ))}
+              </div>
+            </div>
+
+            <div className="p-2">
+              <hr />
+              <div className="d-flex justify-content-center gap-5 mt-5 mb-2">
+                {technologies
+                  .filter((tech) => tech.isPopular)
+                  .map((tech) => (
+                    <Card key={tech.id} imgSrc={tech.imgSrc} title={tech.title} isPopular={tech.isPopular}>
+                      {tech.description}
+                    </Card>
+                  ))}
+              </div>
+            </div>
+
+            <div className="p-2">
+              <hr />
+              <div className="d-flex justify-content-center gap-5 mt-5 mb-2">
+                {technologies
+                  .filter((tech) => tech.isPopular && tech.isJsFramework)
+                  .map((tech) => (
+                    <Card key={tech.id} imgSrc={tech.imgSrc} title={tech.title} isPopular={tech.isPopular} isJsFramework={tech.isJsFramework}>
+                      {tech.description}
+                    </Card>
+                  ))}
+              </div>
+            </div>
+
+            <div className='p-2'>
+              <hr />
+              <div className="d-flex justify-content-center gap-5 mt-5 mb-5">
+                <form className="w-50" onSubmit={handleSubmit}>
+                  <div className="mb-3">
+                    <label htmlFor="exampleInputName" className="form-label text-white">Name</label>
+                    <input type="text" id="exampleInputName" name="exampleInputName" className="form-control" onChange={handleChange} />
+                  </div>
+                  <div className="mb-3">
+                    <label htmlFor="exampleInputEmail" className="form-label text-white">Email address</label>
+                    <input type="email" className="form-control" id="exampleInputEmail" aria-describedby="emailHelp" />
+                    <div id="emailHelp" className="form-text text-white">We&apos;ll never share your email with anyone else.</div>
+                  </div>
+                  <div className="mb-3">
+                    <label htmlFor="exampleInputPassword" className="form-label text-white">Password</label>
+                    <input type="password" className="form-control" id="exampleInputPassword" />
+                  </div>
+                  <div className="mb-3 form-check">
+                    <input type="checkbox" className="form-check-input" id="exampleCheck" />
+                    <label className="form-check-label text-white" htmlFor="exampleCheck">Check me out</label>
+                  </div>
+                  <button type="submit">Click me!</button>
+                </form>
+              </div>
             </div>
           </div>
+        </main>
 
-          <div className="p-2">
-            <hr />
-            <div className="d-flex justify-content-center gap-5 mt-5 mb-2">
-              {technologies
-                .filter((tech) => tech.isPopular && tech.isJsFramework)
-                .map((tech) => (
-                  <Card key={tech.id} imgSrc={tech.imgSrc} title={tech.title} isPopular={tech.isPopular} isJsFramework={tech.isJsFramework}>
-                    {tech.description}
-                  </Card>
-                ))}
-            </div>
-          </div>
-
-          <div className='p-2'>
-            <hr />
-            <div className="d-flex justify-content-center gap-5 mt-5 mb-5">
-              <form className="w-50" onSubmit={handleSubmit}>
-                <div className="mb-3">
-                  <label htmlFor="exampleInputName" className="form-label text-white">Name</label>
-                  <input type="text" id="exampleInputName" name="exampleInputName" className="form-control" onChange={handleChange} />
-                </div>
-                <div className="mb-3">
-                  <label htmlFor="exampleInputEmail" className="form-label text-white">Email address</label>
-                  <input type="email" className="form-control" id="exampleInputEmail" aria-describedby="emailHelp" />
-                  <div id="emailHelp" className="form-text text-white">We&apos;ll never share your email with anyone else.</div>
-                </div>
-                <div className="mb-3">
-                  <label htmlFor="exampleInputPassword" className="form-label text-white">Password</label>
-                  <input type="password" className="form-control" id="exampleInputPassword" />
-                </div>
-                <div className="mb-3 form-check">
-                  <input type="checkbox" className="form-check-input" id="exampleCheck" />
-                  <label className="form-check-label text-white" htmlFor="exampleCheck">Check me out</label>
-                </div>
-                <button type="submit">Click me!</button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </main>
-
-      <footer>
-        <Footer />
-      </footer>
+        <footer>
+          <Footer />
+        </footer>
+      </div>
     </>
   );
 }
