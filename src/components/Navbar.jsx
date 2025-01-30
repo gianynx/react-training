@@ -2,6 +2,11 @@ import Link from './Link';
 import '../assets/css/Navbar.css';
 
 function Navbar() {
+
+  function handleSubmit(e) {
+    e.preventDefault();
+  }
+
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top p-4">
       <div className="container-fluid">
@@ -18,7 +23,7 @@ function Navbar() {
             <Link>Services</Link>
             <Link>Contact</Link>
           </ul>
-          <form className="d-flex mx-5" role="search">
+          <form className="d-flex mx-5" role="search" onSubmit={handleSubmit}>
             <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
             <button className="btn btn-dark px-2" type="submit">
               Click
