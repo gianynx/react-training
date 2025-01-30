@@ -8,15 +8,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
   min-height: 100vh;
   background: linear-gradient(to bottom, #b5bdc8 0%,#828c95 36%,#28343b 100%) !important;
