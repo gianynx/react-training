@@ -1,19 +1,21 @@
 import '../assets/css/Footer.css';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebook, faTwitter, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 function Footer() {
     return (
-        <footer className="footer">
+        <footer className="footer text-center">
             <div className="container">
                 <p>&copy; 2025 Your Company. All rights reserved.</p>
                 <div className="social-icons">
-                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                        <i className="fab fa-facebook-f"></i>
+                    <a href="/" target="_blank" rel="noopener noreferrer">
+                        <FontAwesomeIcon icon={faFacebook} />
                     </a>
-                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                        <i className="fab fa-twitter"></i>
+                    <a href="/" target="_blank" rel="noopener noreferrer">
+                        <FontAwesomeIcon icon={faTwitter} />
                     </a>
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-                        <i className="fab fa-linkedin-in"></i>
+                    <a href="/" target="_blank" rel="noopener noreferrer">
+                        <FontAwesomeIcon icon={faLinkedin} />
                     </a>
                 </div>
             </div>
