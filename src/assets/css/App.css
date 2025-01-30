@@ -28,15 +28,6 @@
   object-fit: contain;
 }
 
-.read-the-docs {
-  color: #888;
-}
-
-.h2-style {
-  font-size: 2.5rem;
-  color: #00D8FF;
-}
-
 .box {
   background-color: #588157;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
@@ -47,6 +38,10 @@
 }
 .rotated {
   transform: rotate(2deg);
+}
+.h2-style {
+  font-size: 2.5rem;
+  color: #00D8FF;
 }
 
 @keyframes logo-spin {
