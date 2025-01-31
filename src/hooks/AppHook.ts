@@ -63,7 +63,7 @@ const useAppHook = (): AppHookData => {
             description: "This is a new technology added to the list.",
         };
 
-        setTechnologies([newTechnology, ...technologies]);
+        setTechnologies([...technologies, newTechnology]);
     }
 
     function handleChange(e: React.ChangeEvent<HTMLInputElement>): void {
