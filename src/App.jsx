@@ -18,10 +18,10 @@ function App() {
         <Navbar />
       </header>
 
-      <div className="content">
+      <div id="content-app">
         <main>
           <div className="container">
-            <section className="box-section">
+            <section id="box-section">
               <div className="d-flex justify-content-evenly align-items-center mt-5 p-3">
                 <div className={`box rounded-5 p-4 ${boxPosition > 1 ? "rotated" : ""}`}>
                   <div className="d-flex align-items-center">
@@ -49,7 +49,7 @@ function App() {
               </div>
             </section>
 
-            <section className="technologies-section">
+            <section id="technologies-section">
               <div className="p-4">
                 <hr />
                 <h2 className="text-center mt-5">Technologies</h2>
@@ -63,7 +63,7 @@ function App() {
               </div>
             </section>
 
-            <section className="popular-technologies-section">
+            <section id="popular-technologies-section">
               <div className="p-2">
                 <hr />
                 <h2 className="text-center mt-5">Popular Technologies</h2>
@@ -79,7 +79,7 @@ function App() {
               </div>
             </section>
 
-            <section className="popular-js-frameworks-section">
+            <section id="popular-js-frameworks-section">
               <div className="p-2">
                 <hr />
                 <h2 className="text-center mt-5">Popular Technologies & JavaScript Frameworks</h2>
@@ -95,7 +95,7 @@ function App() {
               </div>
             </section>
 
-            <section className="form-section">
+            <section id="form-section">
               <div className='p-2'>
                 <hr />
                 <div className="d-flex justify-content-center gap-5 mt-5 mb-5">
