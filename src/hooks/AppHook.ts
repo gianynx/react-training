@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import AppHookData from '../types/AppHookTypes';
 
 const useAppHook = (): AppHookData => {
@@ -9,7 +10,7 @@ const useAppHook = (): AppHookData => {
     const boxPosition = 2;
     const img = 'react';
 
-    const technologies = [
+    const [technologies, setTechnologies] = useState([
         {
             id: "react",
             title: "React",
@@ -50,7 +51,20 @@ const useAppHook = (): AppHookData => {
             isJsFramework: true,
             description: "Angular is a platform and framework for building single-page client applications using HTML and TypeScript.",
         },
-    ];
+    ])
+
+    const addTechnology = () => {
+        const newTechnology = {
+            id: `tech-${technologies.length + 1}`,
+            title: `New Technology ${technologies.length + 1}`,
+            imgSrc: "/new-tech.png",
+            isPopular: false,
+            isJsFramework: false,
+            description: "This is a new technology added to the list.",
+        };
+
+        setTechnologies([...technologies, newTechnology]);
+    }
 
     function handleChange(e: React.ChangeEvent<HTMLInputElement>): void {
         console.log(e.target.value);
@@ -60,7 +74,7 @@ const useAppHook = (): AppHookData => {
         e.preventDefault();
     }
 
-    return { h1Title, h1Style, boxPosition, img, technologies, handleChange, handleSubmit };
+    return { h1Title, h1Style, boxPosition, img, technologies, addTechnology, handleChange, handleSubmit };
 }
 
 export default useAppHook;
