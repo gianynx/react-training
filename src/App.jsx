@@ -10,7 +10,7 @@ import './assets/css/App.css';
 function App() {
 
   const [count, setCount] = useState(0);
-  const { h1Title, h1Style, boxPosition, img, technologies, handleSubmit, handleChange } = useAppHook();
+  const { h1Title, h1Style, boxPosition, img, technologies, addTechnology, handleSubmit, handleChange } = useAppHook();
 
   return (
     <>
@@ -34,7 +34,7 @@ function App() {
                 </div>
                 <div>
                   <a href="https://vite.dev" target="_blank">
-                    <img src={viteLogo} className="logo" alt="Vite logo" style={{ height: "10rem" }} />
+                    <img src={viteLogo} className="vite logo" alt="Vite logo" style={{ height: "10rem" }} />
                   </a>
                   <a href="https://react.dev" target="_blank">
                     <img src={reactLogo} className="logo react" alt="React logo" style={{ height: "10rem" }} />
@@ -54,7 +54,7 @@ function App() {
                 <hr />
                 <h2 className="text-center mt-5">Technologies</h2>
                 <div className="d-flex justify-content-center gap-3 mt-5 mb-2">
-                  <button type="button" className="btn btn-outline-success px-5">Add</button>
+                  <button type="button" className="btn btn-outline-success px-5" onClick={addTechnology}>Add</button>
                   <button type="button" className="btn btn-outline-danger px-5">Delete</button>
                 </div>
                 <div className="d-flex justify-content-center gap-5 mt-5 mb-2">
