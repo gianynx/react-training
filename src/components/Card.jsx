@@ -8,7 +8,6 @@ function Card({ title, imgSrc, children, isPopular, isJsFramework }) {
                 <img src={imgSrc} className="card-img-top" alt={title} />
             </div>
             <h5 className="card-title fw-bold text-center mt-3">{title}</h5>
-            <button className="btn btn-dark mt-4">Click me!</button>
             <div className="text-center mt-4">
                 <p className="fw-bold">{popularLabel}</p>
                 <p className="fw-bold">{jsFrameworkLabel}</p>
