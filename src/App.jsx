@@ -57,7 +57,7 @@ function App() {
                   <button type="button" className="btn btn-outline-success px-5" onClick={addTechnology}>Add</button>
                   <button type="button" className="btn btn-outline-danger px-5">Delete</button>
                 </div>
-                <div className="d-flex justify-content-center gap-5 mt-5 mb-2">
+                <div className="d-flex justify-content-center flex-wrap gap-5 mt-5 mb-2">
                   {technologies.map((tech) => (
                     <Card key={tech.id} imgSrc={tech.imgSrc} title={tech.title} isPopular={tech.isPopular}>
                       {tech.description}
