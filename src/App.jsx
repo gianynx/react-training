@@ -2,7 +2,7 @@ import { useState } from 'react';
 import useAppHook from './hooks/appHook';
 import reactLogo from '/react.svg';
 import viteLogo from '/vite.svg';
-import Navbar from './components/Navbar';
+import Header from './components/Header';
 import Card from './components/Card';
 import Footer from './components/Footer';
 import './assets/css/App.css';
@@ -15,7 +15,7 @@ function App() {
   return (
     <>
       <header>
-        <Navbar />
+        <Header />
       </header>
 
       <div id="content-app">

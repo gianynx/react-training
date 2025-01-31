@@ -1,5 +1,5 @@
 import Link from './Link';
-import '../assets/css/Navbar.css';
+import '../assets/css/Header.css';
 
 function Navbar() {
 
