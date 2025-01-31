@@ -63,7 +63,11 @@ const useAppHook = (): AppHookData => {
             description: "This is a new technology added to the list.",
         };
 
-        setTechnologies([...technologies, newTechnology]);
+        setTechnologies([newTechnology, ...technologies]);
+    }
+
+    const removeTechnology = () => {
+        setTechnologies(technologies.slice(1));
     }
 
     function handleChange(e: React.ChangeEvent<HTMLInputElement>): void {
@@ -74,7 +78,7 @@ const useAppHook = (): AppHookData => {
         e.preventDefault();
     }
 
-    return { h1Title, h1Style, boxPosition, img, technologies, addTechnology, handleChange, handleSubmit };
+    return { h1Title, h1Style, boxPosition, img, technologies, addTechnology, removeTechnology, handleChange, handleSubmit };
 }
 
 export default useAppHook;
