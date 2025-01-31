@@ -40,7 +40,7 @@ function App() {
                 </a>
               </div>
               <div>
-                <h1>Vite + React</h1>
+                <h2 className="text-center">Vite + React</h2>
                 <div className="card">
                   <button onClick={() => setCount((count) => count + 1)}>Count is {count}</button>
                 </div>
@@ -49,6 +49,7 @@ function App() {
 
             <div className="p-4">
               <hr />
+              <h2 className="text-center mt-5">Technologies</h2>
               <div className="d-flex justify-content-center gap-5 mt-5 mb-2">
                 {technologies.map((tech) => (
                   <Card key={tech.id} imgSrc={tech.imgSrc} title={tech.title} isPopular={tech.isPopular}>
@@ -60,6 +61,7 @@ function App() {
 
             <div className="p-2">
               <hr />
+              <h2 className="text-center mt-5">Popular Technologies</h2>
               <div className="d-flex justify-content-center gap-5 mt-5 mb-2">
                 {technologies
                   .filter((tech) => tech.isPopular)
@@ -73,6 +75,7 @@ function App() {
 
             <div className="p-2">
               <hr />
+              <h2 className="text-center mt-5">Popular Technologies & JavaScript Frameworks</h2>
               <div className="d-flex justify-content-center gap-5 mt-5 mb-2">
                 {technologies
                   .filter((tech) => tech.isPopular && tech.isJsFramework)
