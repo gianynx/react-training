@@ -10,7 +10,7 @@ import './assets/css/App.css';
 function App() {
 
   const [count, setCount] = useState(0);
-  const { h1Title, h1Style, h2Title, boxPosition, img, technologies, handleSubmit, handleChange } = useAppHook();
+  const { h1Title, h1Style, boxPosition, img, technologies, handleSubmit, handleChange } = useAppHook();
 
   return (
     <>
@@ -27,7 +27,7 @@ function App() {
                   <div className="d-flex align-items-center">
                     <div>
                       <h1 style={h1Style}>{h1Title}</h1>
-                      <h2 className="h2-style">{h2Title}</h2>
+                      <h2 className="h2-style">Full-time Course</h2>
                     </div>
                     <img src={`/${img}.svg`} alt="React logo" className="mx-3" style={{ height: "100px" }} />
                   </div>

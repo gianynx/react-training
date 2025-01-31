@@ -6,7 +6,6 @@ const useAppHook = (): AppHookData => {
         color: "black",
         fontSize: "3.3rem",
     };
-    const h2Title = "Full-time Course";
     const boxPosition = 2;
     const img = 'react';
 
@@ -61,7 +60,7 @@ const useAppHook = (): AppHookData => {
         e.preventDefault();
     }
 
-    return { h1Title, h1Style, h2Title, boxPosition, img, technologies, handleChange, handleSubmit };
+    return { h1Title, h1Style, boxPosition, img, technologies, handleChange, handleSubmit };
 }
 
 export default useAppHook;
