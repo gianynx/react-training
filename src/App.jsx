@@ -10,7 +10,7 @@ import './assets/css/App.css';
 function App() {
 
   const [count, setCount] = useState(0);
-  const { h1Title, h1Style, boxPosition, img, technologies, addTechnology, handleSubmit, handleChange } = useAppHook();
+  const { h1Title, h1Style, boxPosition, img, technologies, addTechnology, removeTechnology, handleSubmit, handleChange } = useAppHook();
 
   return (
     <>
@@ -55,7 +55,7 @@ function App() {
                 <h2 className="text-center mt-5">Technologies</h2>
                 <div className="d-flex justify-content-center gap-3 mt-5 mb-2">
                   <button type="button" className="btn btn-outline-success px-5" onClick={addTechnology}>Add</button>
-                  <button type="button" className="btn btn-outline-danger px-5">Delete</button>
+                  <button type="button" className="btn btn-outline-danger px-5" onClick={removeTechnology}>Delete</button>
                 </div>
                 <div className="d-flex justify-content-center flex-wrap gap-5 mt-5 mb-2">
                   {technologies.map((tech) => (
