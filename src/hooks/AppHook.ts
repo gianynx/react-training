@@ -56,8 +56,8 @@ const useAppHook = (): AppHookData => {
     const addTechnology = () => {
         const newTechnology = {
             id: `tech-${technologies.length + 1}`,
-            title: `New Technology_${technologies.length + 1}`,
-            imgSrc: "/new-tech.png",
+            title: "New Technology",
+            imgSrc: "spinner",
             isPopular: false,
             isJsFramework: false,
             description: "This is a new technology added to the list.",

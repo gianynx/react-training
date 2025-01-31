@@ -5,7 +5,13 @@ function Card({ title, imgSrc, children, isPopular, isJsFramework }) {
     return (
         <div className="card" style={{ width: "18rem" }}>
             <div className="d-flex justify-content-center align-items-center mb-3" style={{ height: "12rem" }}>
-                <img src={imgSrc} className="card-img-top" alt={title} />
+                {imgSrc === "spinner" ? (
+                    <div className="spinner-grow" style={{ width: "3rem", height: "3rem" }}>
+                        <output className="visually-hidden">Loading...</output>
+                    </div>
+                ) : (
+                    <img src={imgSrc} className="card-img-top" alt={title} />
+                )}
             </div>
             <h5 className="card-title fw-bold text-center mt-3">{title}</h5>
             <div className="text-center mt-4">
