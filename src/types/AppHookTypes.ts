@@ -5,6 +5,7 @@ export interface AppHookData {
     img: string;
     technologies: Technology[];
     addTechnology: () => void;
+    removeTechnology: () => void;
     handleSubmit: (e: any) => void;
     handleChange: (e: any) => void;
 }
