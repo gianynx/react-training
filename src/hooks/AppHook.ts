@@ -56,14 +56,14 @@ const useAppHook = (): AppHookData => {
     const addTechnology = () => {
         const newTechnology = {
             id: `tech-${technologies.length + 1}`,
-            title: `New Technology ${technologies.length + 1}`,
+            title: `New Technology_${technologies.length + 1}`,
             imgSrc: "/new-tech.png",
             isPopular: false,
             isJsFramework: false,
             description: "This is a new technology added to the list.",
         };
 
-        setTechnologies([...technologies, newTechnology]);
+        setTechnologies([newTechnology, ...technologies]);
     }
 
     function handleChange(e: React.ChangeEvent<HTMLInputElement>): void {
