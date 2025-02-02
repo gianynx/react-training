@@ -106,19 +106,19 @@ function App() {
                   <form className="w-50" onSubmit={handleSubmit}>
                     <div className="mb-3">
                       <label htmlFor="exampleInputName" className="form-label text-white">Name</label>
-                      <input type="text" id="exampleInputName" name="exampleInputName" className="form-control" onChange={handleChange} />
+                      <input type="text" id="exampleInputName" name="exampleInputName" className="form-control" onChange={handleChange} minLength="3" maxLength="23" required />
                     </div>
                     <div className="mb-3">
                       <label htmlFor="exampleInputEmail" className="form-label text-white">Email address</label>
-                      <input type="email" className="form-control" id="exampleInputEmail" aria-describedby="emailHelp" />
+                      <input type="email" className="form-control" id="exampleInputEmail" aria-describedby="emailHelp" minLength="3" maxLength="23" required />
                       <div id="emailHelp" className="form-text text-white">We&apos;ll never share your email with anyone else.</div>
                     </div>
                     <div className="mb-3">
                       <label htmlFor="exampleInputPassword" className="form-label text-white">Password</label>
-                      <input type="password" className="form-control" id="exampleInputPassword" />
+                      <input type="password" className="form-control" id="exampleInputPassword" minLength="3" maxLength="23" required />
                     </div>
                     <div className="mb-3 form-check">
-                      <input type="checkbox" className="form-check-input" id="exampleCheck" />
+                      <input type="checkbox" className="form-check-input" id="exampleCheck" required />
                       <label className="form-check-label text-white" htmlFor="exampleCheck">Check me out</label>
                     </div>
                     <button type="submit">Click me!</button>
