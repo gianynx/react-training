@@ -1,3 +1,5 @@
+import '../assets/css/Card.css';
+
 function Card({ title, imgSrc, children, isPopular, isJsFramework }) {
     const popularLabel = isPopular ? <span className="text-success">&#10003; Popular</span> : <span className="text-danger mx-3">&#10007; Popular</span>
     const jsFrameworkLabel = isJsFramework ? <span className="text-success">&#10003; JavaScript Framework</span> : ""
