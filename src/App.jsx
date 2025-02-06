@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import useAppHook from './hooks/appHook';
-import reactLogo from '/react.svg';
-import viteLogo from '/vite.svg';
 import Header from './components/Header';
 import Card from './components/Card';
+import CardForm from './components/CardForm';
 import Footer from './components/Footer';
 import './assets/css/App.css';
+import reactLogo from '/react.svg';
+import viteLogo from '/vite.svg';
 
 function App() {
 
@@ -54,8 +55,7 @@ function App() {
                 <hr />
                 <h2 className="text-center mt-5">Technologies</h2>
                 <div className="d-flex justify-content-center gap-3 mt-5 mb-2">
-                  <button type="button" className="btn btn-outline-success px-5" onClick={addTechnology}>Add</button>
-                  <button type="button" className="btn btn-outline-danger px-5" onClick={removeTechnology}>Delete</button>
+                  <CardForm addTechnology={addTechnology} removeTechnology={removeTechnology} />
                 </div>
                 <div className="d-flex justify-content-center flex-wrap gap-5 mt-5 mb-2">
                   {technologies.map((tech) => (
