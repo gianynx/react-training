@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faTwitter, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 function Footer() {
+
     return (
         <footer className="footer text-center">
             <div className="container">
