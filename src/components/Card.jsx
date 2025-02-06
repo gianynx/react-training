@@ -1,6 +1,8 @@
+import PropTypes from 'prop-types';
 import '../assets/css/Card.css';
 
 function Card({ title, imgSrc, children, isPopular, isJsFramework }) {
+
     const popularLabel = isPopular ? <span className="text-success">&#10003; Popular</span> : <span className="text-danger mx-3">&#10007; Popular</span>
     const jsFrameworkLabel = isJsFramework ? <span className="text-success">&#10003; JavaScript Framework</span> : ""
 
@@ -27,5 +29,14 @@ function Card({ title, imgSrc, children, isPopular, isJsFramework }) {
         </div>
     );
 }
+
+// Prop type validation
+Card.propTypes = {
+    title: PropTypes.string.isRequired,
+    imgSrc: PropTypes.string.isRequired,
+    children: PropTypes.node,
+    isPopular: PropTypes.bool,
+    isJsFramework: PropTypes.bool,
+};
 
 export default Card;
