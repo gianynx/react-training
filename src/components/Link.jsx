@@ -1,4 +1,7 @@
+import PropTypes from 'prop-types';
+
 function Link({ children }) {
+
     return (
         <li className="nav-item">
             <button className="nav-link" type="button">
@@ -7,5 +10,10 @@ function Link({ children }) {
         </li>
     );
 }
+
+// Prop type validation
+Link.propTypes = {
+    children: PropTypes.node.isRequired,
+};
 
 export default Link;
