@@ -4,7 +4,7 @@ export interface AppHookData {
     boxPosition: number;
     img: string;
     technologies: Technology[];
-    addTechnology: () => void;
+    addTechnology: (newTechnology: Technology) => void;
     removeTechnology: () => void;
     handleSubmit: (e: any) => void;
     handleChange: (e: any) => void;
