@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import AppHookData from '../types/AppHookTypes';
+import AppHookData, { Technology } from '../types/AppHookTypes';
 
 const useAppHook = (): AppHookData => {
     const h1Title = "React Training";
@@ -53,16 +53,7 @@ const useAppHook = (): AppHookData => {
         },
     ])
 
-    const addTechnology = () => {
-        const newTechnology = {
-            id: `tech-${technologies.length + 1}`,
-            title: "New Technology",
-            imgSrc: "spinner",
-            isPopular: false,
-            isJsFramework: false,
-            description: "This is a new technology added to the list.",
-        };
-
+    const addTechnology = (newTechnology: Technology): void => {
         setTechnologies([newTechnology, ...technologies]);
     }
 
