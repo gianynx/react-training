@@ -21,7 +21,7 @@ function CardForm({ addTechnology, removeTechnology }) {
     }
 
     return (
-        <form onSubmit={handleAdd} className="rounded p-5" style={{ backgroundColor: "#162638" }}>
+        <form onSubmit={(e) => { e.preventDefault(); handleAdd() }} className="rounded p-5" style={{ backgroundColor: "#162638" }}>
             <div className="d-flex align-items-center gap-4">
                 <div className="mb-3">
                     <label htmlFor="inputName" className="form-label text-white">Title</label>
