@@ -1,6 +1,14 @@
+import { useState } from 'react';
 import PropTypes from 'prop-types';
 
 function CardForm({ addTechnology, removeTechnology }) {
+
+    const [formData, setFormData] = useState({
+        title: "",
+        imgSrc: "",
+        description: "",
+        isPopular: false,
+    });
 
     const handleAdd = () => {
         const newTechnology = {
@@ -25,18 +33,18 @@ function CardForm({ addTechnology, removeTechnology }) {
             <div className="d-flex align-items-center gap-4">
                 <div className="mb-3">
                     <label htmlFor="inputName" className="form-label text-white">Title</label>
-                    <input type="text" id="inputName" name="inputName" className="form-control" placeholder="Enter new name" minLength="3" maxLength="23" required />
+                    <input type="text" value={formData.title} id="inputName" name="inputName" className="form-control" placeholder="Enter new name" minLength="3" maxLength="23" required />
                 </div>
                 <div className="mb-3">
                     <label htmlFor="inputImg" className="form-label text-white">Image URL</label>
-                    <input type="text" id="inputImg" name="inputImg" className="form-control" placeholder="Enter new image URL" required />
+                    <input type="text" value={formData.imgSrc} id="inputImg" name="inputImg" className="form-control" placeholder="Enter new image URL" required />
                 </div>
                 <div className="mb-3">
                     <label htmlFor="formControlTextarea" className="form-label text-white">Description</label>
-                    <textarea className="form-control" id="formControlTextarea" rows="2" placeholder="Enter new description" minLength="3" maxLength="100" required />
+                    <textarea value={formData.description} className="form-control" id="formControlTextarea" rows="2" placeholder="Enter new description" minLength="3" maxLength="100" required />
                 </div>
                 <div className="form-check">
-                    <input className="form-check-input" type="checkbox" value="" id="flexCheck" required />
+                    <input type="checkbox" value={formData.isPopular} className="form-check-input" id="flexCheck" required />
                     <label className="form-check-label text-white" htmlFor="flexCheck">
                         Popular
                     </label>
