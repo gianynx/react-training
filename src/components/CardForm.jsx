@@ -13,7 +13,6 @@ function CardForm({ addTechnology, removeTechnology }) {
         };
 
         addTechnology(newTechnology);
-        console.log(newTechnology);
 
     }
 
