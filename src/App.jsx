@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import useAppHook from './hooks/appHook';
+import useAppHook from './hooks/AppHook';
 import Header from './components/Header';
 import Card from './components/Card';
 import CardForm from './components/CardForm';
@@ -53,10 +53,10 @@ function App() {
             <section id="technologies-section">
               <div className="p-4">
                 <hr />
+                <h2 className="text-center mt-5">Technologies</h2>
                 <div className="d-flex justify-content-center gap-3 mt-5">
                   <CardForm addTechnology={addTechnology} removeTechnology={removeTechnology} />
                 </div>
-                <h2 className="text-center mt-5">Technologies</h2>
                 <div className="d-flex justify-content-center flex-wrap gap-5 mt-5 mb-2">
                   {technologies.map((tech) => (
                     <Card key={tech.id} imgSrc={tech.imgSrc} title={tech.title} isPopular={tech.isPopular}>
