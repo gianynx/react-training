@@ -84,7 +84,7 @@ function App() {
             </section>
 
             <section id="popular-js-frameworks-section">
-              <div className="p-2">
+              <div className="p-2 mb-5">
                 <hr />
                 <h2 className="text-center mt-5">Popular Technologies & JavaScript Frameworks</h2>
                 <div className="d-flex justify-content-center gap-5 mt-5 mb-2">
@@ -99,7 +99,7 @@ function App() {
               </div>
             </section>
 
-            <section id="form-section">
+            {/* <section id="form-section">
               <div className='p-2'>
                 <hr />
                 <div className="d-flex justify-content-center gap-5 mt-5 mb-5">
@@ -125,7 +125,7 @@ function App() {
                   </form>
                 </div>
               </div>
-            </section>
+            </section> */}
           </div>
         </main>
 
