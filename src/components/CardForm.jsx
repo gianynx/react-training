@@ -10,6 +10,10 @@ function CardForm({ addTechnology, removeTechnology }) {
         isPopular: false,
     });
 
+    const handleInputChange = (e) => {
+
+    }
+
     const handleAdd = () => {
         const newTechnology = {
             id: "new-technology",
@@ -33,18 +37,18 @@ function CardForm({ addTechnology, removeTechnology }) {
             <div className="d-flex align-items-center gap-4">
                 <div className="mb-3">
                     <label htmlFor="inputName" className="form-label text-white">Title</label>
-                    <input type="text" value={formData.title} id="inputName" name="inputName" className="form-control" placeholder="Enter new name" minLength="3" maxLength="23" required />
+                    <input type="text" value={formData.title} onChange={handleInputChange} id="inputName" name="inputName" className="form-control" placeholder="Enter new name" minLength="3" maxLength="23" required />
                 </div>
                 <div className="mb-3">
                     <label htmlFor="inputImg" className="form-label text-white">Image URL</label>
-                    <input type="text" value={formData.imgSrc} id="inputImg" name="inputImg" className="form-control" placeholder="Enter new image URL" required />
+                    <input type="text" value={formData.imgSrc} onChange={handleInputChange} id="inputImg" name="inputImg" className="form-control" placeholder="Enter new image URL" required />
                 </div>
                 <div className="mb-3">
                     <label htmlFor="formControlTextarea" className="form-label text-white">Description</label>
-                    <textarea value={formData.description} className="form-control" id="formControlTextarea" rows="2" placeholder="Enter new description" minLength="3" maxLength="100" required />
+                    <textarea value={formData.description} onChange={handleInputChange} className="form-control" id="formControlTextarea" rows="2" placeholder="Enter new description" minLength="3" maxLength="100" required />
                 </div>
                 <div className="form-check">
-                    <input type="checkbox" value={formData.isPopular} className="form-check-input" id="flexCheck" required />
+                    <input type="checkbox" checked={formData.isPopular} onChange={handleInputChange} className="form-check-input" id="flexCheck" required />
                     <label className="form-check-label text-white" htmlFor="flexCheck">
                         Popular
                     </label>
