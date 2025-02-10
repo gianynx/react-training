@@ -7,7 +7,6 @@ function CardForm({ addTechnology, removeTechnology }) {
         title: "",
         imgSrc: "",
         isPopular: false,
-        isJsFramework: false,
         description: "",
     });
 
@@ -23,12 +22,15 @@ function CardForm({ addTechnology, removeTechnology }) {
             title: formData.title,
             imgSrc: formData.imgSrc,
             isPopular: formData.isPopular,
-            isJsFramework: formData.isJsFramework,
             description: formData.description,
         };
 
         addTechnology(newTechnology);
 
+        formData.title = "";
+        formData.imgSrc = "";
+        formData.isPopular = false;
+        formData.description = "";
     }
 
     const handleDelete = () => {
@@ -51,15 +53,9 @@ function CardForm({ addTechnology, removeTechnology }) {
                     <textarea value={formData.description} onChange={handleInputChange} className="form-control" id="description" name="description" rows="2" placeholder="Enter new description" minLength="3" maxLength="100" required />
                 </div>
                 <div className="form-check">
-                    <input type="checkbox" checked={formData.isPopular} onChange={handleInputChange} className="form-check-input" id="isPopular" name="isPopular" required />
+                    <input type="checkbox" checked={formData.isPopular} onChange={handleInputChange} className="form-check-input" id="isPopular" name="isPopular" />
                     <label className="form-check-label text-white" htmlFor="isPopular">
                         Popular
-                    </label>
-                </div>
-                <div className="form-check">
-                    <input type="checkbox" checked={formData.isJsFramework} onChange={handleInputChange} className="form-check-input" id="isJsFramework" name="isJsFramework" required />
-                    <label className="form-check-label text-white" htmlFor="isJsFramework">
-                        JS Framework
                     </label>
                 </div>
             </div>
