@@ -11,7 +11,9 @@ function CardForm({ addTechnology, removeTechnology }) {
     });
 
     const handleInputChange = (e) => {
-
+        const { name, value, type, checked } = e.target;
+        const inputValue = type === "checkbox" ? checked : value;
+        setFormData({ ...formData, [name]: inputValue });
     }
 
     const handleAdd = () => {
