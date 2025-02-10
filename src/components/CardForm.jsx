@@ -6,8 +6,9 @@ function CardForm({ addTechnology, removeTechnology }) {
     const [formData, setFormData] = useState({
         title: "",
         imgSrc: "",
-        description: "",
         isPopular: false,
+        isJsFramework: false,
+        description: "",
     });
 
     const handleInputChange = (e) => {
@@ -18,12 +19,12 @@ function CardForm({ addTechnology, removeTechnology }) {
 
     const handleAdd = () => {
         const newTechnology = {
-            id: "new-technology",
-            title: "New Technology",
-            imgSrc: "spinner",
-            isPopular: false,
-            isJsFramework: false,
-            description: "This is a new technology added to the list.",
+            id: Math.random(),
+            title: formData.title,
+            imgSrc: formData.imgSrc,
+            isPopular: formData.isPopular,
+            isJsFramework: formData.isJsFramework,
+            description: formData.description,
         };
 
         addTechnology(newTechnology);
@@ -36,7 +37,7 @@ function CardForm({ addTechnology, removeTechnology }) {
 
     return (
         <form onSubmit={(e) => { e.preventDefault(); handleAdd() }} className="rounded p-5" style={{ backgroundColor: "#162638" }}>
-            <div className="d-flex align-items-center gap-4">
+            <div className="d-flex align-items-center gap-5">
                 <div className="mb-3">
                     <label htmlFor="inputName" className="form-label text-white">Title</label>
                     <input type="text" value={formData.title} onChange={handleInputChange} id="inputName" name="inputName" className="form-control" placeholder="Enter new name" minLength="3" maxLength="23" required />
@@ -53,6 +54,12 @@ function CardForm({ addTechnology, removeTechnology }) {
                     <input type="checkbox" checked={formData.isPopular} onChange={handleInputChange} className="form-check-input" id="flexCheck" required />
                     <label className="form-check-label text-white" htmlFor="flexCheck">
                         Popular
+                    </label>
+                </div>
+                <div className="form-check">
+                    <input type="checkbox" checked={formData.isJsFramework} onChange={handleInputChange} className="form-check-input" id="flexCheck" required />
+                    <label className="form-check-label text-white" htmlFor="flexCheck">
+                        JS Framework
                     </label>
                 </div>
             </div>
