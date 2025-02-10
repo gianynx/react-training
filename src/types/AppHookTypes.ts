@@ -15,7 +15,6 @@ export interface Technology {
     title: string;
     imgSrc: string;
     isPopular: boolean;
-    isJsFramework: boolean;
     description: string;
 }
 
