@@ -41,7 +41,7 @@ function CardForm({ addTechnology, removeTechnology }) {
         <form onSubmit={(e) => { e.preventDefault(); handleAdd() }} className="rounded p-5" style={{ backgroundColor: "#162638" }}>
             <div className="d-flex align-items-center gap-5">
                 <div className="mb-3">
-                    <label htmlFor="title" className="form-label text-white">Title</label>
+                    <label htmlFor="title" className="form-label text-white">Name</label>
                     <input type="text" value={formData.title} onChange={handleInputChange} id="title" name="title" className="form-control" placeholder="Enter new name" minLength="3" maxLength="23" required />
                 </div>
                 <div className="mb-3">
