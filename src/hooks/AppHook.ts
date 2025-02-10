@@ -16,7 +16,6 @@ const useAppHook = (): AppHookData => {
             title: "React",
             imgSrc: "/react.svg",
             isPopular: true,
-            isJsFramework: false,
             description: "React is a popular JavaScript library for building user interfaces, particularly single-page applications.",
         },
         {
@@ -24,7 +23,6 @@ const useAppHook = (): AppHookData => {
             title: "Vite",
             imgSrc: "/vite.svg",
             isPopular: true,
-            isJsFramework: false,
             description: "Vite is a build tool that manages the development and build process of a web application.",
         },
         {
@@ -32,7 +30,6 @@ const useAppHook = (): AppHookData => {
             title: "Cobol",
             imgSrc: "/cobol.png",
             isPopular: false,
-            isJsFramework: false,
             description: "COBOL is a historical programming language, designed for commercial and administrative applications.",
         },
         {
@@ -40,7 +37,6 @@ const useAppHook = (): AppHookData => {
             title: "Vue",
             imgSrc: "/vue.png",
             isPopular: true,
-            isJsFramework: true,
             description: "Vue.js is a progressive JavaScript framework for building user interfaces.",
         },
         {
@@ -48,7 +44,6 @@ const useAppHook = (): AppHookData => {
             title: "Angular",
             imgSrc: "/angular.png",
             isPopular: true,
-            isJsFramework: true,
             description: "Angular is a platform and framework for building single-page client applications using HTML and TypeScript.",
         },
     ])
