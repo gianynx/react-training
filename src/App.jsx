@@ -59,7 +59,7 @@ function App() {
                 </div>
                 <div className="d-flex justify-content-center flex-wrap gap-5 mt-5 mb-2">
                   {technologies.map((tech) => (
-                    <Card key={tech.id} imgSrc={tech.imgSrc} title={tech.title} isPopular={tech.isPopular}>
+                    <Card key={tech.id} imgSrc={tech.imgSrc} title={tech.title}>
                       {tech.description}
                     </Card>
                   ))}
@@ -71,7 +71,7 @@ function App() {
               <div className="p-2">
                 <hr />
                 <h2 className="text-center mt-5">Popular Technologies</h2>
-                <div className="d-flex justify-content-center gap-5 mt-5 mb-2">
+                <div className="d-flex justify-content-center gap-5 mt-5 mb-5">
                   {technologies
                     .filter((tech) => tech.isPopular)
                     .map((tech) => (
@@ -82,50 +82,6 @@ function App() {
                 </div>
               </div>
             </section>
-
-            <section id="popular-js-frameworks-section">
-              <div className="p-2 mb-5">
-                <hr />
-                <h2 className="text-center mt-5">Popular Technologies & JavaScript Frameworks</h2>
-                <div className="d-flex justify-content-center gap-5 mt-5 mb-2">
-                  {technologies
-                    .filter((tech) => tech.isPopular && tech.isJsFramework)
-                    .map((tech) => (
-                      <Card key={tech.id} imgSrc={tech.imgSrc} title={tech.title} isPopular={tech.isPopular} isJsFramework={tech.isJsFramework}>
-                        {tech.description}
-                      </Card>
-                    ))}
-                </div>
-              </div>
-            </section>
-
-            {/* <section id="form-section">
-              <div className='p-2'>
-                <hr />
-                <div className="d-flex justify-content-center gap-5 mt-5 mb-5">
-                  <form className="w-50" onSubmit={handleSubmit}>
-                    <div className="mb-3">
-                      <label htmlFor="inputName" className="form-label text-white">Name</label>
-                      <input type="text" onChange={handleChange} id="inputName" name="inputName" className="form-control" placeholder="Enter your name" minLength="3" maxLength="23" required />
-                    </div>
-                    <div className="mb-3">
-                      <label htmlFor="inputEmail" className="form-label text-white">Email address</label>
-                      <input type="email" className="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter your email" minLength="3" maxLength="23" required />
-                      <div id="emailHelp" className="form-text text-white">We&apos;ll never share your email with anyone else.</div>
-                    </div>
-                    <div className="mb-3">
-                      <label htmlFor="inputPassword" className="form-label text-white">Password</label>
-                      <input type="password" className="form-control" id="inputPassword" placeholder="Enter your password" minLength="3" maxLength="23" required />
-                    </div>
-                    <div className="mb-3 form-check">
-                      <input type="checkbox" className="form-check-input" id="check" required />
-                      <label className="form-check-label text-white" htmlFor="check">Check me out</label>
-                    </div>
-                    <button type="submit">Click me!</button>
-                  </form>
-                </div>
-              </div>
-            </section> */}
           </div>
         </main>
 
