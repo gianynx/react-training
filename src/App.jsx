@@ -11,7 +11,7 @@ import viteLogo from '/vite.svg';
 function App() {
 
   const [count, setCount] = useState(0);
-  const { h1Title, h1Style, boxPosition, img, technologies, addTechnology, removeTechnology, handleSubmit, handleChange } = useAppHook();
+  const { h1Title, h1Style, boxPosition, img, technologies, addTechnology, removeTechnology } = useAppHook();
 
   return (
     <>
