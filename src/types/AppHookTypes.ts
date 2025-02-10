@@ -11,7 +11,7 @@ export interface AppHookData {
 }
 
 export interface Technology {
-    id: string;
+    id: number;
     title: string;
     imgSrc: string;
     isPopular: boolean;
