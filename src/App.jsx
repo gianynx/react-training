@@ -53,11 +53,11 @@ function App() {
                 <hr />
                 <h2 className="text-center mt-5">Technologies</h2>
                 <div className="d-flex justify-content-center gap-3 mt-5">
-                  <CardForm addTechnology={addTechnology} removeTechnology={removeTechnology} />
+                  <CardForm addTechnology={addTechnology} />
                 </div>
                 <div className="d-flex justify-content-center flex-wrap gap-5 mt-5 mb-2">
                   {technologies.map((tech) => (
-                    <Card key={tech.id} imgSrc={tech.imgSrc} title={tech.title} isPopular={tech.isPopular}>
+                    <Card key={tech.id} imgSrc={tech.imgSrc} title={tech.title} isPopular={tech.isPopular} removeTechnology={removeTechnology}>
                       {tech.description}
                     </Card>
                   ))}

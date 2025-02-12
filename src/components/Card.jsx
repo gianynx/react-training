@@ -1,7 +1,11 @@
 import PropTypes from 'prop-types';
 import '../assets/css/Card.css';
 
-function Card({ title, imgSrc, children, isPopular }) {
+function Card({ title, imgSrc, children, isPopular, removeTechnology }) {
+
+    const handleDelete = () => {
+        removeTechnology();
+    }
 
     const popularLabel = isPopular ? <span className="text-success">&#10003; Popular</span> : <span className="text-danger"> &#10007; Popular</span>
 
@@ -18,6 +22,7 @@ function Card({ title, imgSrc, children, isPopular }) {
             <div className="card-body text-center p-2">
                 <p className="card-text">{children}</p>
             </div>
+            <button type="button" onClick={handleDelete} className="btn btn-outline-danger w-75 mx-auto px-5 mt-3">Delete</button>
         </div>
     );
 }
@@ -28,6 +33,7 @@ Card.propTypes = {
     imgSrc: PropTypes.string.isRequired,
     children: PropTypes.node,
     isPopular: PropTypes.bool,
+    removeTechnology: PropTypes.func,
 };
 
 export default Card;

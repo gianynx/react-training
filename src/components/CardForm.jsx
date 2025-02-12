@@ -2,7 +2,7 @@ import { useState } from 'react';
 import PropTypes from 'prop-types';
 import '../assets/css/CardForm.css';
 
-function CardForm({ addTechnology, removeTechnology }) {
+function CardForm({ addTechnology }) {
 
     const [formData, setFormData] = useState({
         title: "",
@@ -34,10 +34,6 @@ function CardForm({ addTechnology, removeTechnology }) {
         formData.description = "";
     }
 
-    const handleDelete = () => {
-        removeTechnology();
-    }
-
     return (
         <div className="d-flex flex-column gap-3">
             <button className="mx-auto" data-bs-toggle="collapse" data-bs-target="#collpseForm" aria-expanded="false" aria-controls="collpseForm">
@@ -67,7 +63,6 @@ function CardForm({ addTechnology, removeTechnology }) {
                     </div>
                     <div className="d-flex justify-content-center gap-4 mt-2">
                         <button type="submit" className="btn btn-outline-success px-5">Add</button>
-                        <button type="button" onClick={handleDelete} className="btn btn-outline-danger px-5">Delete</button>
                     </div>
                 </form>
             </div>
@@ -78,7 +73,6 @@ function CardForm({ addTechnology, removeTechnology }) {
 // Prop type validation
 CardForm.propTypes = {
     addTechnology: PropTypes.func.isRequired,
-    removeTechnology: PropTypes.func.isRequired,
 };
 
 export default CardForm;
