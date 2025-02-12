@@ -48,6 +48,13 @@ const useAppHook = (): AppHookData => {
             isPopular: true,
             description: "Angular is a platform and framework for building single-page client applications using HTML and TypeScript.",
         },
+        {
+            id: 6,
+            title: "Ada",
+            imgSrc: "/ada.png",
+            isPopular: false,
+            description: "Ada is a programming language developed in the late 1970s by the US Department of Defense.",
+        },
     ])
 
     const addTechnology = (newTechnology: Technology): void => {
