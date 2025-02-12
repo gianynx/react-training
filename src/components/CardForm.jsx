@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
+import '../assets/css/CardForm.css';
 
 function CardForm({ addTechnology, removeTechnology }) {
 
@@ -43,7 +44,7 @@ function CardForm({ addTechnology, removeTechnology }) {
                 <span className="fs-6">Click me!</span>
             </button>
             <div className="collapse" id="collpseForm">
-                <form onSubmit={(e) => { e.preventDefault(); handleAdd() }} className="rounded p-5" style={{ backgroundColor: "#162638" }}>
+                <form onSubmit={(e) => { e.preventDefault(); handleAdd() }} className="rounded box-shadow p-4">
                     <div className="d-flex align-items-center gap-5">
                         <div className="mb-3">
                             <label htmlFor="title" className="form-label text-white">Name</label>
