@@ -57,7 +57,7 @@ function App() {
                 </div>
                 <div className="d-flex justify-content-center flex-wrap gap-5 mt-5 mb-2">
                   {technologies.map((tech) => (
-                    <Card key={tech.id} imgSrc={tech.imgSrc} title={tech.title} isPopular={tech.isPopular} removeTechnology={removeTechnology}>
+                    <Card key={tech.id} id={tech.id} imgSrc={tech.imgSrc} title={tech.title} isPopular={tech.isPopular} removeTechnology={removeTechnology}>
                       {tech.description}
                     </Card>
                   ))}

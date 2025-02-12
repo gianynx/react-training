@@ -7,7 +7,7 @@ export interface AppHookData {
     count: number;
     setCount: React.Dispatch<React.SetStateAction<number>>;
     addTechnology: (newTechnology: Technology) => void;
-    removeTechnology: () => void;
+    removeTechnology: (id: number) => void;
 }
 
 export interface Technology {

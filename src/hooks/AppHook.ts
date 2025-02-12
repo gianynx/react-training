@@ -61,8 +61,8 @@ const useAppHook = (): AppHookData => {
         setTechnologies([newTechnology, ...technologies]);
     }
 
-    const removeTechnology = () => {
-        setTechnologies(technologies.filter((technology) => technology.isPopular === true));
+    const removeTechnology = (id: number): void => {
+        setTechnologies(technologies.filter((technology) => technology.id !== id));
     }
 
     return { h1Title, h1Style, boxPosition, img, technologies, count, setCount, addTechnology, removeTechnology };

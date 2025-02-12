@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import '../assets/css/Card.css';
 
-function Card({ title, imgSrc, children, isPopular, removeTechnology }) {
+function Card({ id, title, imgSrc, children, isPopular, removeTechnology }) {
 
     const handleDelete = () => {
-        removeTechnology();
+        removeTechnology(id);
     }
 
     const popularLabel = isPopular ? <span className="text-success">&#10003; Popular</span> : <span className="text-danger"> &#10007; Popular</span>
@@ -31,6 +31,7 @@ function Card({ title, imgSrc, children, isPopular, removeTechnology }) {
 
 // Prop type validation
 Card.propTypes = {
+    id: PropTypes.number,
     title: PropTypes.string.isRequired,
     imgSrc: PropTypes.string.isRequired,
     children: PropTypes.node,
