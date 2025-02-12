@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import useAppHook from './hooks/AppHook';
 import Header from './components/Header';
 import Card from './components/Card';
@@ -10,8 +9,7 @@ import viteLogo from '/vite.svg';
 
 function App() {
 
-  const [count, setCount] = useState(0);
-  const { h1Title, h1Style, boxPosition, img, technologies, addTechnology, removeTechnology } = useAppHook();
+  const { h1Title, h1Style, boxPosition, img, technologies, count, setCount, addTechnology, removeTechnology } = useAppHook();
 
   return (
     <>

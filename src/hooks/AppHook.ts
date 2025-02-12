@@ -10,6 +10,8 @@ const useAppHook = (): AppHookData => {
     const boxPosition = 2;
     const img = 'react';
 
+    const [count, setCount] = useState(0);
+
     const [technologies, setTechnologies] = useState([
         {
             id: 1,
@@ -56,15 +58,7 @@ const useAppHook = (): AppHookData => {
         setTechnologies(technologies.slice(1));
     }
 
-    function handleChange(e: React.ChangeEvent<HTMLInputElement>): void {
-        console.log(e.target.value);
-    }
-
-    function handleSubmit(e: React.ChangeEvent<HTMLInputElement>): void {
-        e.preventDefault();
-    }
-
-    return { h1Title, h1Style, boxPosition, img, technologies, addTechnology, removeTechnology, handleChange, handleSubmit };
+    return { h1Title, h1Style, boxPosition, img, technologies, count, setCount, addTechnology, removeTechnology };
 }
 
 export default useAppHook;

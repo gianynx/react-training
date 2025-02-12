@@ -4,10 +4,10 @@ export interface AppHookData {
     boxPosition: number;
     img: string;
     technologies: Technology[];
+    count: number;
+    setCount: React.Dispatch<React.SetStateAction<number>>;
     addTechnology: (newTechnology: Technology) => void;
     removeTechnology: () => void;
-    handleSubmit: (e: any) => void;
-    handleChange: (e: any) => void;
 }
 
 export interface Technology {
