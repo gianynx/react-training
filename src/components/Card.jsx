@@ -22,7 +22,9 @@ function Card({ title, imgSrc, children, isPopular, removeTechnology }) {
             <div className="card-body text-center p-2">
                 <p className="card-text">{children}</p>
             </div>
-            <button type="button" onClick={handleDelete} className="btn btn-outline-danger w-75 mx-auto px-5 mt-3">Delete</button>
+            {!isPopular && (
+                <button type="button" onClick={handleDelete} className="btn btn-outline-danger w-75 mx-auto px-5 mt-3">Delete</button>
+            )}
         </div>
     );
 }
