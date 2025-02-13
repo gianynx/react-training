@@ -1,38 +1,10 @@
-import { useState } from 'react';
+import useCardFormHook from '../hooks/CardFormHook';
 import PropTypes from 'prop-types';
 import '../assets/css/CardForm.css';
 
 function CardForm({ addTechnology }) {
 
-    const [formData, setFormData] = useState({
-        title: "",
-        imgSrc: "",
-        isPopular: false,
-        description: "",
-    });
-
-    const handleInputChange = (e) => {
-        const { name, value, type, checked } = e.target;
-        const inputValue = type === "checkbox" ? checked : value;
-        setFormData({ ...formData, [name]: inputValue });
-    }
-
-    const handleAdd = () => {
-        const newTechnology = {
-            id: Math.random(),
-            title: formData.title,
-            imgSrc: formData.imgSrc,
-            isPopular: formData.isPopular,
-            description: formData.description,
-        };
-
-        addTechnology(newTechnology);
-
-        formData.title = "";
-        formData.imgSrc = "";
-        formData.isPopular = false;
-        formData.description = "";
-    }
+    const { formData, handleInputChange, handleAdd } = useCardFormHook(addTechnology);
 
     return (
         <div className="d-flex flex-column gap-3">
