@@ -9,7 +9,7 @@ import viteLogo from '/vite.svg';
 
 function App() {
 
-  const { h1Title, h1Style, boxPosition, img, technologies, count, setCount, addTechnology, removeTechnology } = useAppHook();
+  const { h1Title, h1Style, boxPosition, img, technologies, addTechnology, removeTechnology } = useAppHook();
 
   return (
     <>
@@ -38,12 +38,6 @@ function App() {
                   <a href="https://react.dev" target="_blank">
                     <img src={reactLogo} className="logo react" alt="React logo" style={{ height: "10rem" }} />
                   </a>
-                </div>
-                <div>
-                  <h2 className="text-center">Vite + React</h2>
-                  <div className="card">
-                    <button onClick={() => setCount((count) => count + 1)}>Count is {count}</button>
-                  </div>
                 </div>
               </div>
             </section>

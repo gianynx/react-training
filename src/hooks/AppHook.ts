@@ -10,8 +10,6 @@ const useAppHook = (): AppHookData => {
     const boxPosition = 2;
     const img = 'react';
 
-    const [count, setCount] = useState(0);
-
     const [technologies, setTechnologies] = useState([
         {
             id: 1,
@@ -65,7 +63,7 @@ const useAppHook = (): AppHookData => {
         setTechnologies(technologies.filter((technology) => technology.id !== id));
     }
 
-    return { h1Title, h1Style, boxPosition, img, technologies, count, setCount, addTechnology, removeTechnology };
+    return { h1Title, h1Style, boxPosition, img, technologies, addTechnology, removeTechnology };
 }
 
 export default useAppHook;

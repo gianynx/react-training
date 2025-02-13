@@ -4,8 +4,6 @@ export interface AppHookData {
     boxPosition: number;
     img: string;
     technologies: Technology[];
-    count: number;
-    setCount: React.Dispatch<React.SetStateAction<number>>;
     addTechnology: (newTechnology: Technology) => void;
     removeTechnology: (id: number) => void;
 }
