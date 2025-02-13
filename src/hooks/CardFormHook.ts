@@ -26,10 +26,12 @@ const useCardFormHook = (addTechnology: (newTechnology: Technology) => void) => 
 
         addTechnology(newTechnology);
 
-        formData.title = "";
-        formData.imgSrc = "";
-        formData.isPopular = false;
-        formData.description = "";
+        setFormData({
+            title: "",
+            imgSrc: "",
+            isPopular: false,
+            description: "",
+        });
     }
 
     return { formData, handleInputChange, handleAdd };
