@@ -12,42 +12,42 @@ const useAppHook = (): AppHookData => {
 
     const [technologies, setTechnologies] = useState([
         {
-            id: 1,
+            id: 0,
             title: "React",
             imgSrc: "/react.svg",
             isPopular: true,
             description: "React is a popular JavaScript library for building user interfaces, particularly single-page applications.",
         },
         {
-            id: 2,
+            id: 1,
             title: "Vite",
             imgSrc: "/vite.svg",
             isPopular: true,
             description: "Vite is a build tool that manages the development and build process of a web application.",
         },
         {
-            id: 3,
+            id: 2,
             title: "Cobol",
             imgSrc: "/cobol.png",
             isPopular: false,
             description: "COBOL is a historical programming language, designed for commercial and administrative applications.",
         },
         {
-            id: 4,
+            id: 3,
             title: "Vue",
             imgSrc: "/vue.png",
             isPopular: true,
             description: "Vue.js is a progressive JavaScript framework for building user interfaces.",
         },
         {
-            id: 5,
+            id: 4,
             title: "Angular",
             imgSrc: "/angular.png",
             isPopular: true,
             description: "Angular is a platform and framework for building single-page client applications using HTML and TypeScript.",
         },
         {
-            id: 6,
+            id: 5,
             title: "Ada",
             imgSrc: "/ada.png",
             isPopular: false,
