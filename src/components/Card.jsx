@@ -17,10 +17,6 @@ function Card({ id, title, imgSrc, children, isPopular, removeTechnology }) {
 
     }
 
-    const handleCloseToast = () => {
-        setShowToast(false);
-    }
-
     const popularLabel = isPopular ? <span className="text-success">&#10003; Popular</span> : <span className="text-danger"> &#10007; Popular</span>
 
     return (
@@ -40,7 +36,7 @@ function Card({ id, title, imgSrc, children, isPopular, removeTechnology }) {
                 <button type="button" onClick={handleDelete} className="btn btn-outline-danger w-75 mx-auto px-5 mt-3">Delete</button>
             )}
 
-            <Toast message={`Technology ${title} has been removed.`} show={showToast} onClose={handleCloseToast} />
+            <Toast message={`Technology ${title} has been removed.`} show={showToast} />
         </div>
     );
 }
