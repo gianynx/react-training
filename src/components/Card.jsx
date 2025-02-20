@@ -1,10 +1,24 @@
+import { useState } from 'react';
 import PropTypes from 'prop-types';
+import Toast from './Toast';
 import '../assets/css/Card.css';
 
 function Card({ id, title, imgSrc, children, isPopular, removeTechnology }) {
+    const [showToast, setShowToast] = useState(false);
 
     const handleDelete = () => {
-        removeTechnology(id);
+        setShowToast(true);
+
+        setTimeout(() => {
+            removeTechnology(id);
+        }, 1000);
+
+        console.log("showToast: ", showToast);
+
+    }
+
+    const handleCloseToast = () => {
+        setShowToast(false);
     }
 
     const popularLabel = isPopular ? <span className="text-success">&#10003; Popular</span> : <span className="text-danger"> &#10007; Popular</span>
@@ -25,6 +39,8 @@ function Card({ id, title, imgSrc, children, isPopular, removeTechnology }) {
             {!isPopular && (
                 <button type="button" onClick={handleDelete} className="btn btn-outline-danger w-75 mx-auto px-5 mt-3">Delete</button>
             )}
+
+            <Toast message={`Technology ${title} has been removed.`} show={showToast} onClose={handleCloseToast} />
         </div>
     );
 }
