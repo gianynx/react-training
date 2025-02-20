@@ -4,6 +4,7 @@ import Toast from './Toast';
 import '../assets/css/Card.css';
 
 function Card({ id, title, imgSrc, children, isPopular, removeTechnology }) {
+
     const [showToast, setShowToast] = useState(false);
 
     const handleDelete = () => {

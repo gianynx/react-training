@@ -4,6 +4,7 @@ import bootstrap from 'bootstrap/dist/js/bootstrap.bundle.min';
 import '../assets/css/Toast.css';
 
 function Toast({ message, show }) {
+
     const toastRef = useRef(null);
 
     useEffect(() => {
