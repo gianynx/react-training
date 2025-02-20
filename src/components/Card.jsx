@@ -12,9 +12,6 @@ function Card({ id, title, imgSrc, children, isPopular, removeTechnology }) {
         setTimeout(() => {
             removeTechnology(id);
         }, 1000);
-
-        console.log("showToast: ", showToast);
-
     }
 
     const popularLabel = isPopular ? <span className="text-success">&#10003; Popular</span> : <span className="text-danger"> &#10007; Popular</span>
