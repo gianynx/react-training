@@ -1,3 +1,4 @@
+import { useReducer } from 'react';
 import useAppHook from './hooks/AppHook';
 import Header from './components/Header';
 import Card from './components/Card';
@@ -11,6 +12,38 @@ function App() {
 
   const { h1Title, h1Style, boxPosition, img, technologies, addTechnology, removeTechnology } = useAppHook();
 
+
+  // Example form section
+  const formReducer = (state, action) => {
+    switch (action.type) {
+      case "CHANGE_FIELD":
+        return { ...state, [action.field]: action.value };
+      case "RESET_FIELD":
+        return { title: "", imgSrc: "", description: "" };
+      default:
+        return state;
+    }
+  };
+
+  const [formData, dispatchFormData] = useReducer(formReducer, {
+    title: "",
+    imgSrc: "",
+    description: "",
+  });
+
+  const handleInputChange = (field, value) => {
+    dispatchFormData({ type: "CHANGE_FIELD", field, value });
+  };
+
+  const resetForm = () => {
+    dispatchFormData({ type: "RESET_FIELD" });
+  };
+
+  const sendForm = (e) => {
+    e.preventDefault();
+    console.log("Form submitted: ", formData);
+  }
+
   return (
     <>
       <header>
@@ -20,6 +53,31 @@ function App() {
       <div id="content-app">
         <main>
           <div className="container">
+
+            {/* Example form section */}
+            <section id="example-form-section">
+              <form className="rounded box-shadow mt-5 p-3">
+                <div className="d-flex justify-content-center gap-5">
+                  <div className="mb-3">
+                    <label htmlFor="title" className="form-label text-white">Name</label>
+                    <input type="text" value={formData.title} onChange={(e) => handleInputChange("title", e.target.value)} id="title" name="title" className="form-control" placeholder="Enter new name" minLength="3" maxLength="23" required />
+                  </div>
+                  <div className="mb-3">
+                    <label htmlFor="imgSrc" className="form-label text-white">Image URL</label>
+                    <input type="text" value={formData.imgSrc} onChange={(e) => handleInputChange("imgSrc", e.target.value)} id="imgSrc" name="imgSrc" className="form-control" placeholder="Enter new image URL" required />
+                  </div>
+                  <div className="mb-3">
+                    <label htmlFor="description" className="form-label text-white">Description</label>
+                    <textarea value={formData.description} onChange={(e) => handleInputChange("description", e.target.value)} className="form-control" id="description" name="description" rows="2" placeholder="Enter new description" minLength="3" maxLength="100" required />
+                  </div>
+                </div>
+                <div className="d-flex justify-content-center gap-4 mt-2">
+                  <button onClick={sendForm} className="btn btn-outline-success px-5">Invia</button>
+                  <button onClick={resetForm} className="btn btn-outline-danger px-5">Reset</button>
+                </div>
+              </form>
+            </section>
+
             <section id="box-section">
               <div className="d-flex justify-content-evenly align-items-center mt-5 p-3">
                 <div className={`box rounded-5 p-4 ${boxPosition > 1 ? "rotated" : ""}`}>
