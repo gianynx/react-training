@@ -12,23 +12,21 @@ function App() {
 
   const { h1Title, h1Style, boxPosition, img, technologies, addTechnology, removeTechnology } = useAppHook();
 
-
-  // Example form section
   const formReducer = (state, action) => {
     switch (action.type) {
       case "CHANGE_FIELD":
         return { ...state, [action.field]: action.value };
       case "RESET_FIELD":
-        return { title: "", imgSrc: "", description: "" };
+        return { email: "", name: "", privacyChecked: false };
       default:
         return state;
     }
   };
 
   const [formData, dispatchFormData] = useReducer(formReducer, {
-    title: "",
-    imgSrc: "",
-    description: "",
+    email: "",
+    name: "",
+    privacyChecked: false,
   });
 
   const handleInputChange = (field, value) => {
@@ -53,30 +51,6 @@ function App() {
       <div id="content-app">
         <main>
           <div className="container">
-
-            {/* Example form section */}
-            <section id="example-form-section">
-              <form className="rounded box-shadow mt-5 p-3">
-                <div className="d-flex justify-content-center gap-5">
-                  <div className="mb-3">
-                    <label htmlFor="title" className="form-label text-white">Name</label>
-                    <input type="text" value={formData.title} onChange={(e) => handleInputChange("title", e.target.value)} id="title" name="title" className="form-control" placeholder="Enter new name" minLength="3" maxLength="23" required />
-                  </div>
-                  <div className="mb-3">
-                    <label htmlFor="imgSrc" className="form-label text-white">Image URL</label>
-                    <input type="text" value={formData.imgSrc} onChange={(e) => handleInputChange("imgSrc", e.target.value)} id="imgSrc" name="imgSrc" className="form-control" placeholder="Enter new image URL" required />
-                  </div>
-                  <div className="mb-3">
-                    <label htmlFor="description" className="form-label text-white">Description</label>
-                    <textarea value={formData.description} onChange={(e) => handleInputChange("description", e.target.value)} className="form-control" id="description" name="description" rows="2" placeholder="Enter new description" minLength="3" maxLength="100" required />
-                  </div>
-                </div>
-                <div className="d-flex justify-content-center gap-4 mt-2">
-                  <button onClick={sendForm} className="btn btn-outline-success px-5">Invia</button>
-                  <button onClick={resetForm} className="btn btn-outline-danger px-5">Reset</button>
-                </div>
-              </form>
-            </section>
 
             <section id="box-section">
               <div className="d-flex justify-content-evenly align-items-center mt-5 p-3">
@@ -131,6 +105,33 @@ function App() {
                     ))}
                 </div>
               </div>
+            </section>
+
+            <section id="newsletter-form-section">
+              <hr />
+              <h2 className="text-center text-white mt-5">Subscribe to our newsletter</h2>
+              <form className="rounded box-shadow mt-5 mb-5 p-3">
+                <div className="d-flex justify-content-center align-items-center gap-5">
+                  <div className="mb-3">
+                    <label htmlFor="email" className="form-label text-white">Email</label>
+                    <input type="text" value={formData.email} onChange={(e) => handleInputChange("email", e.target.value)} id="email" name="email" className="form-control" placeholder="Enter your email" minLength="3" maxLength="23" required />
+                  </div>
+                  <div className="mb-3">
+                    <label htmlFor="name" className="form-label text-white">Name</label>
+                    <input type="text" value={formData.name} onChange={(e) => handleInputChange("name", e.target.value)} id="name" name="name" className="form-control" placeholder="Enter your name" minLength="3" maxLength="23" />
+                  </div>
+                  <div className="form-check">
+                    <input type="checkbox" checked={formData.privacyChecked} onChange={(e) => handleInputChange("privacyChecked", e.target.value)} className="form-check-input" id="privacyChecked" name="privacyChecked" />
+                    <label className="form-check-label text-white" htmlFor="privacyChecked">
+                      I consent to the processing of data according to the privacy policy.
+                    </label>
+                  </div>
+                </div>
+                <div className="d-flex justify-content-center gap-4 mt-2">
+                  <button onClick={sendForm} className="btn btn-outline-success px-5">Subscribe</button>
+                  <button onClick={resetForm} className="btn btn-outline-danger px-5">Reset</button>
+                </div>
+              </form>
             </section>
           </div>
         </main>
