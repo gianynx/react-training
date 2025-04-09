@@ -1,4 +1,3 @@
-import { useReducer } from 'react';
 import useAppHook from './hooks/AppHook';
 import Header from './components/Header';
 import Card from './components/Card';
@@ -10,37 +9,7 @@ import viteLogo from '/vite.svg';
 
 function App() {
 
-  const { h1Title, h1Style, boxPosition, img, technologies, addTechnology, removeTechnology } = useAppHook();
-
-  const formReducer = (state, action) => {
-    switch (action.type) {
-      case "CHANGE_FIELD":
-        return { ...state, [action.field]: action.value };
-      case "RESET_FIELD":
-        return { email: "", name: "", privacyChecked: false };
-      default:
-        return state;
-    }
-  };
-
-  const [formData, dispatchFormData] = useReducer(formReducer, {
-    email: "",
-    name: "",
-    privacyChecked: false,
-  });
-
-  const handleInputChange = (field, value) => {
-    dispatchFormData({ type: "CHANGE_FIELD", field, value });
-  };
-
-  const resetForm = () => {
-    dispatchFormData({ type: "RESET_FIELD" });
-  };
-
-  const sendForm = (e) => {
-    e.preventDefault();
-    console.log("Form submitted: ", formData);
-  }
+  const { h1Title, h1Style, boxPosition, img, technologies, addTechnology, removeTechnology, formData, handleInputChange, resetForm, sendForm } = useAppHook();
 
   return (
     <>

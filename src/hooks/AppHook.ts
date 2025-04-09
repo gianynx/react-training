@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import AppHookData, { Technology } from '../types/AppHookTypes';
+import { useState, useReducer } from 'react';
+import { AppHookData, Technology, FormState, FormAction, SendFormEvent } from '../types/AppHookTypes';
 
 const useAppHook = (): AppHookData => {
     const h1Title = "React Training";
@@ -63,7 +63,37 @@ const useAppHook = (): AppHookData => {
         setTechnologies(technologies.filter((technology) => technology.id !== id));
     }
 
-    return { h1Title, h1Style, boxPosition, img, technologies, addTechnology, removeTechnology };
+    const formReducer = (state: FormState, action: FormAction): FormState => {
+        switch (action.type) {
+            case "CHANGE_FIELD":
+                return { ...state, [action.field as keyof FormState]: action.value };
+            case "RESET_FIELD":
+                return { email: "", name: "", privacyChecked: false };
+            default:
+                return state;
+        }
+    };
+
+    const [formData, dispatchFormData] = useReducer(formReducer, {
+        email: "",
+        name: "",
+        privacyChecked: false,
+    });
+
+    const handleInputChange = (field: keyof FormState, value: string | boolean): void => {
+        dispatchFormData({ type: "CHANGE_FIELD", field, value });
+    };
+
+    const resetForm = () => {
+        dispatchFormData({ type: "RESET_FIELD" });
+    };
+
+    const sendForm = (e: SendFormEvent): void => {
+        e.preventDefault();
+        console.log("Form submitted: ", formData);
+    };
+
+    return { h1Title, h1Style, boxPosition, img, technologies, addTechnology, removeTechnology, formData, handleInputChange, resetForm, sendForm };
 }
 
 export default useAppHook;
