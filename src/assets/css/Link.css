@@ -1,0 +1,22 @@
+.nav-link {
+  position: relative;
+  padding: 8px 12px;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+.hover-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: black;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: bottom right;
+}
+.nav-item:hover .hover-underline::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
