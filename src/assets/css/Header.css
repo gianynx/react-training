@@ -11,7 +11,8 @@
 
 form > .form-control:focus {
   box-shadow: none;
-  border-color: black
+  border-color: black;
+  background-color: rgb(236, 230, 230);
 }
 
 .icon-link {
