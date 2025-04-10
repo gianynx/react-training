@@ -5,6 +5,15 @@
   z-index: 1030;
 }
 
-#logoNike {
+#logo-nike {
   height: 80px;
+}
+
+.icon-link {
+  padding: 10px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.icon-link:hover {
+  background-color: rgb(204, 198, 198);
 }
