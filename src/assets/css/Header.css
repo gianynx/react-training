@@ -22,3 +22,11 @@ form > .form-control:focus {
 .icon-link:hover {
   background-color: rgb(204, 198, 198);
 }
+
+ul.dropdown-menu {
+  background-color: white;
+  border-color: rgb(121, 111, 111);
+}
+ul.dropdown-menu li a:active {
+  background-color: black;
+}

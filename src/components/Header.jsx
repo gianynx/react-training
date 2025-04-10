@@ -22,7 +22,7 @@ function Navbar() {
               <button className="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                 <Link>Novità e in evidenza</Link>
               </button>
-              <ul className="dropdown-menu dropdown-menu-dark">
+              <ul className="dropdown-menu">
                 <li><a className="dropdown-item" href="/">In evidenza</a></li>
                 <li><a className="dropdown-item" href="/">Scopri le icone</a></li>
                 <li><a className="dropdown-item" href="/">Jordan</a></li>
@@ -33,7 +33,7 @@ function Navbar() {
               <button className="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                 <Link>Uomo</Link>
               </button>
-              <ul className="dropdown-menu dropdown-menu-dark">
+              <ul className="dropdown-menu">
                 <li><a className="dropdown-item" href="/">In evidenza</a></li>
                 <li><a className="dropdown-item" href="/">Scarpe</a></li>
                 <li><a className="dropdown-item" href="/">Abbigliamento</a></li>
@@ -45,7 +45,7 @@ function Navbar() {
               <button className="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                 <Link>Donna</Link>
               </button>
-              <ul className="dropdown-menu dropdown-menu-dark">
+              <ul className="dropdown-menu">
                 <li><a className="dropdown-item" href="/">In evidenza</a></li>
                 <li><a className="dropdown-item" href="/">Scarpe</a></li>
                 <li><a className="dropdown-item" href="/">Abbigliamento</a></li>
@@ -57,7 +57,7 @@ function Navbar() {
               <button className="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                 <Link>Kids</Link>
               </button>
-              <ul className="dropdown-menu dropdown-menu-dark">
+              <ul className="dropdown-menu">
                 <li><a className="dropdown-item" href="/">In evidenza</a></li>
                 <li><a className="dropdown-item" href="/">Scarpe</a></li>
                 <li><a className="dropdown-item" href="/">Abbigliamento</a></li>
@@ -69,7 +69,7 @@ function Navbar() {
               <button className="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                 <Link>Outlet</Link>
               </button>
-              <ul className="dropdown-menu dropdown-menu-dark">
+              <ul className="dropdown-menu">
                 <li><a className="dropdown-item" href="/">Offerte</a></li>
                 <li><a className="dropdown-item" href="/">Outlet - Uomo</a></li>
                 <li><a className="dropdown-item" href="/">Outlet - Donna</a></li>
