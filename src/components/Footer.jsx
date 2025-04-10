@@ -9,13 +9,13 @@ function Footer() {
             <div className="container">
                 <p>&copy; 2025 Your Company. All rights reserved.</p>
                 <div className="social-icons">
-                    <a href="/" target="_blank" rel="noopener noreferrer">
+                    <a href="/">
                         <FontAwesomeIcon icon={faFacebook} />
                     </a>
-                    <a href="/" target="_blank" rel="noopener noreferrer">
+                    <a href="/">
                         <FontAwesomeIcon icon={faTwitter} />
                     </a>
-                    <a href="/" target="_blank" rel="noopener noreferrer">
+                    <a href="/">
                         <FontAwesomeIcon icon={faLinkedin} />
                     </a>
                 </div>
