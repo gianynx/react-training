@@ -5,10 +5,6 @@ import { faMagnifyingGlass, faHeart, faCartShopping } from "@fortawesome/free-so
 
 function Navbar() {
 
-  function handleSubmit(e) {
-    e.preventDefault();
-  }
-
   return (
     <nav className="navbar navbar-expand-lg bg-white fixed-top px-5 p-2">
       <div className="container-fluid d-flex justify-content-between">
@@ -29,7 +25,7 @@ function Navbar() {
             <Link>Outlet</Link>
           </ul>
           <div className="d-flex align-items-center gap-2">
-            <form className="d-flex mx-2" role="search" onSubmit={handleSubmit}>
+            <form className="d-flex mx-2" role="search" onSubmit={(e) => { e.preventDefault() }}>
               <input className="form-control me-2" type="search" placeholder="Cerca" aria-label="Search" />
               <button className="btn btn-dark px-2" type="submit">
                 <FontAwesomeIcon icon={faMagnifyingGlass} />
