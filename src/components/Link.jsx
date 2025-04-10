@@ -5,7 +5,7 @@ function Link({ children }) {
     return (
         <li className="nav-item px-3">
             <button className="nav-link text-dark" type="button">
-                {children}
+                <span className="fw-medium">{children}</span>
             </button>
         </li>
     );
