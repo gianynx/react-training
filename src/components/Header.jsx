@@ -8,10 +8,10 @@ function Navbar() {
   }
 
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top p-4">
+    <nav className="navbar navbar-expand-lg bg-white fixed-top px-5 p-2">
       <div className="container-fluid">
         <a className="navbar-brand" href="/">
-          React Navbar
+          <img src="/swoosh.jpg" alt="Nike logo" id="logoNike" />
         </a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
