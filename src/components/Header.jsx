@@ -1,7 +1,7 @@
 import Link from './Link';
 import '../assets/css/Header.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMagnifyingGlass } from "@fortawesome/free-brands-svg-icons";
+import { faMagnifyingGlass, faHeart, faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
 function Navbar() {
 
@@ -28,15 +28,20 @@ function Navbar() {
             <Link>Kids</Link>
             <Link>Outlet</Link>
           </ul>
-          <form className="d-flex mx-5" role="search" onSubmit={handleSubmit}>
-            <input className="form-control me-2" type="search" placeholder="Cerca" aria-label="Search" />
-            <a href="/" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faMagnifyingGlass} />
+          <div className="d-flex align-items-center gap-2">
+            <form className="d-flex mx-2" role="search" onSubmit={handleSubmit}>
+              <input className="form-control me-2" type="search" placeholder="Cerca" aria-label="Search" />
+              <button className="btn btn-dark px-2" type="submit">
+                <FontAwesomeIcon icon={faMagnifyingGlass} />
+              </button>
+            </form>
+            <a href="/" className="text-decoration-none text-dark">
+              <FontAwesomeIcon icon={faHeart} className="fs-5" />
             </a>
-            <button className="btn btn-dark px-2" type="submit">
-              <FontAwesomeIcon icon={faMagnifyingGlass} />
-            </button>
-          </form>
+            <a href="/" className="text-decoration-none text-dark">
+              <FontAwesomeIcon icon={faCartShopping} className="fs-5" />
+            </a>
+          </div>
         </div>
       </div>
     </nav>
