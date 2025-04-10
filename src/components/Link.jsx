@@ -4,9 +4,9 @@ function Link({ children }) {
 
     return (
         <li className="nav-item px-3">
-            <button className="nav-link text-dark" type="button">
+            <a className="nav-link text-dark" href="/">
                 <span className="fw-medium">{children}</span>
-            </button>
+            </a>
         </li>
     );
 }
