@@ -11,7 +11,8 @@
 body {
   min-height: 100vh;
   background: linear-gradient(to bottom, #b5bdc8 0%,#828c95 36%,#28343b 100%) !important;
-  font-family: "DM Serif Display", serif !important;
+  font-family: "Roboto Condensed", sans-serif !important;
+  font-optical-sizing: auto !important;
   font-weight: 400 !important;
   font-style: normal !important;
 }
