@@ -23,22 +23,34 @@ function App() {
             <div id="carouselSlidesOnly" className="carousel slide vw-100" data-bs-ride="carousel">
               <div className="carousel-inner">
                 <div className="carousel-item active">
-                  <img src="/nike_1.jpg" className="d-block object-fit-cover" alt="nike_1" />
+                  <a href="/">
+                    <img src="/nike_1.jpg" className="d-block object-fit-cover" alt="nike_1" />
+                  </a>
                 </div>
                 <div className="carousel-item">
-                  <img src="/nike_2.jpg" className="d-block object-fit-cover" alt="nike_2" />
+                  <a href="/">
+                    <img src="/nike_2.jpg" className="d-block object-fit-cover" alt="nike_2" />
+                  </a>
                 </div>
                 <div className="carousel-item">
-                  <img src="/nike_3.jpg" className="d-block object-fit-cover" alt="nike_3" />
+                  <a href="/">
+                    <img src="/nike_3.jpg" className="d-block object-fit-cover" alt="nike_3" />
+                  </a>
                 </div>
                 <div className="carousel-item">
-                  <img src="/nike_4.jpg" className="d-block object-fit-cover" alt="nike_4" />
+                  <a href="/">
+                    <img src="/nike_4.jpg" className="d-block object-fit-cover" alt="nike_4" />
+                  </a>
                 </div>
                 <div className="carousel-item">
-                  <img src="/nike_5.jpg" className="d-block object-fit-cover" alt="nike_5" />
+                  <a href="/">
+                    <img src="/nike_5.jpg" className="d-block object-fit-cover" alt="nike_5" />
+                  </a>
                 </div>
                 <div className="carousel-item">
-                  <img src="/nike_6.jpg" className="d-block object-fit-cover" alt="nike_6" />
+                  <a href="/">
+                    <img src="/nike_6.jpg" className="d-block object-fit-cover" alt="nike_6" />
+                  </a>
                 </div>
               </div>
             </div>
