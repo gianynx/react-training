@@ -19,8 +19,32 @@ function App() {
 
       <div id="content-app">
         <main>
-          <div className="container">
+          <section id="carousel-section" className="d-flex justify-content-center align-items-center">
+            <div id="carouselSlidesOnly" className="carousel slide vw-100" data-bs-ride="carousel">
+              <div className="carousel-inner">
+                <div className="carousel-item active">
+                  <img src="/nike_1.jpg" className="d-block object-fit-cover" alt="nike_1" />
+                </div>
+                <div className="carousel-item">
+                  <img src="/nike_2.jpg" className="d-block object-fit-cover" alt="nike_2" />
+                </div>
+                <div className="carousel-item">
+                  <img src="/nike_3.jpg" className="d-block object-fit-cover" alt="nike_3" />
+                </div>
+                <div className="carousel-item">
+                  <img src="/nike_4.jpg" className="d-block object-fit-cover" alt="nike_4" />
+                </div>
+                <div className="carousel-item">
+                  <img src="/nike_5.jpg" className="d-block object-fit-cover" alt="nike_5" />
+                </div>
+                <div className="carousel-item">
+                  <img src="/nike_6.jpg" className="d-block object-fit-cover" alt="nike_6" />
+                </div>
+              </div>
+            </div>
+          </section>
 
+          <div className="container">
             <section id="box-section">
               <div className="d-flex justify-content-evenly align-items-center mt-5 p-3">
                 <div className={`box rounded-5 p-4 ${boxPosition > 1 ? "rotated" : ""}`}>
