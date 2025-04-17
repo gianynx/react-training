@@ -93,7 +93,16 @@ const useAppHook = (): AppHookData => {
         console.log("Form submitted: ", formData);
     };
 
-    return { h1Title, h1Style, boxPosition, img, technologies, addTechnology, removeTechnology, formData, handleInputChange, resetForm, sendForm };
+    const carouselImages = [
+        { src: '/nike_1.jpg', alt: 'Nike 1' },
+        { src: '/nike_2.jpg', alt: 'Nike 2' },
+        { src: '/nike_3.jpg', alt: 'Nike 3' },
+        { src: '/nike_3.jpg', alt: 'Nike 4' },
+        { src: '/nike_3.jpg', alt: 'Nike 5' },
+        { src: '/nike_3.jpg', alt: 'Nike 6' },
+    ];
+
+    return { h1Title, h1Style, boxPosition, img, technologies, addTechnology, removeTechnology, formData, handleInputChange, resetForm, sendForm, carouselImages };
 }
 
 export default useAppHook;

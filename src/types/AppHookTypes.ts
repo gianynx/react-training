@@ -10,6 +10,7 @@ export interface AppHookData {
     handleInputChange: (field: keyof FormState, value: string | boolean) => void;
     resetForm: () => void;
     sendForm: (e: SendFormEvent) => void;
+    carouselImages: { src: string; alt: string }[];
 }
 
 export interface Technology {

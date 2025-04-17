@@ -1,5 +1,6 @@
 import useAppHook from './hooks/AppHook';
 import Header from './components/Header';
+import Carousel from './components/Carousel';
 import Card from './components/Card';
 import CardForm from './components/CardForm';
 import Footer from './components/Footer';
@@ -9,7 +10,7 @@ import viteLogo from '/vite.svg';
 
 function App() {
 
-  const { h1Title, h1Style, boxPosition, img, technologies, addTechnology, removeTechnology, formData, handleInputChange, resetForm, sendForm } = useAppHook();
+  const { h1Title, h1Style, boxPosition, img, technologies, addTechnology, removeTechnology, formData, handleInputChange, resetForm, sendForm, carouselImages } = useAppHook();
 
   return (
     <>
@@ -20,42 +21,7 @@ function App() {
       <div id="content-app">
         <main>
           <section id="carousel-section">
-            <div className="d-flex justify-content-center align-items-center">
-              <div id="carouselSlidesOnly" className="carousel slide vw-100" data-bs-ride="carousel">
-                <div className="carousel-inner">
-                  <div className="carousel-item active">
-                    <a href="/">
-                      <img src="/nike_1.jpg" className="d-block object-fit-cover" alt="nike_1" />
-                    </a>
-                  </div>
-                  <div className="carousel-item">
-                    <a href="/">
-                      <img src="/nike_2.jpg" className="d-block object-fit-cover" alt="nike_2" />
-                    </a>
-                  </div>
-                  <div className="carousel-item">
-                    <a href="/">
-                      <img src="/nike_3.jpg" className="d-block object-fit-cover" alt="nike_3" />
-                    </a>
-                  </div>
-                  <div className="carousel-item">
-                    <a href="/">
-                      <img src="/nike_4.jpg" className="d-block object-fit-cover" alt="nike_4" />
-                    </a>
-                  </div>
-                  <div className="carousel-item">
-                    <a href="/">
-                      <img src="/nike_5.jpg" className="d-block object-fit-cover" alt="nike_5" />
-                    </a>
-                  </div>
-                  <div className="carousel-item">
-                    <a href="/">
-                      <img src="/nike_6.jpg" className="d-block object-fit-cover" alt="nike_6" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <Carousel images={carouselImages} />
           </section>
 
           <div className="container">
