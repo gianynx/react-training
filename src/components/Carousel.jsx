@@ -1,14 +1,18 @@
 import PropTypes from 'prop-types';
+import '../assets/css/Carousel.css';
 
-function Carousel({ images }) {
+function Carousel({ media }) {
 
     return (
         <div className="d-flex justify-content-center align-items-center">
             <div id="carouselSlidesOnly" className="carousel slide carousel-fade vw-100" data-bs-ride="carousel">
                 <div className="carousel-inner">
-                    {images.map((image, index) => (
-                        <div key={image.src} className={`carousel-item ${index === 0 ? 'active' : ''}`}>
-                            <img src={image.src} className="d-block object-fit-cover" alt={image.alt} loading="lazy" />
+                    {media.map((item, index) => (
+                        <div key={item.src} className={`carousel-item ${index === 0 ? 'active' : ''}`}>
+                            {item.type === 'video' ? (
+                                <video src={item.src} className="d-block w-100 object-fit-cover" autoPlay loop muted playsInline />
+                            ) : (
+                                <img src={item.src} className="d-block object-fit-cover" alt={item.alt} />)}
                         </div>
                     ))}
                 </div>
@@ -19,7 +23,7 @@ function Carousel({ images }) {
 
 // Prop type validation 
 Carousel.propTypes = {
-    images: PropTypes.arrayOf(
+    media: PropTypes.arrayOf(
         PropTypes.shape({
             src: PropTypes.string.isRequired,
             alt: PropTypes.string.isRequired,
