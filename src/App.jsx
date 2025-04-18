@@ -8,7 +8,7 @@ import './assets/css/App.css';
 
 function App() {
 
-  const { technologies, addTechnology, removeTechnology, formData, handleInputChange, resetForm, sendForm, carouselImages } = useAppHook();
+  const { technologies, addTechnology, removeTechnology, formData, handleInputChange, resetForm, sendForm, carouselMedia } = useAppHook();
 
   return (
     <>
@@ -19,7 +19,7 @@ function App() {
       <div id="content-app">
         <main>
           <section id="carousel-section">
-            <Carousel images={carouselImages} />
+            <Carousel media={carouselMedia} />
           </section>
 
           <div className="container">
