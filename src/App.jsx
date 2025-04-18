@@ -23,13 +23,15 @@ function App() {
           </section>
 
           <section id="promotional-section">
-            <div className="d-flex flex-column justify-content-center align-items-center bg-dark text-white p-2">
-              <div className="d-flex flex-column justify-content-center align-items-center text-uppercase fw-bold promo-title">
-                <span>massima ammortizzazione:</span>
-                <span>grande comfort, grandi corse</span>
+            <a href="/" className="text-decoration-none">
+              <div className="d-flex flex-column justify-content-center align-items-center bg-dark text-white p-2">
+                <div className="d-flex flex-column justify-content-center align-items-center text-uppercase fw-bold promo-title">
+                  <span>massima ammortizzazione:</span>
+                  <span>grande comfort, grandi corse</span>
+                </div>
+                <span className="fs-5">Scopri le nuove colorway di Vomero 18.</span>
               </div>
-              <span className="fs-5">Scopri le nuove colorway di Vomero 18.</span>
-            </div>
+            </a>
           </section>
 
           <div className="container">
