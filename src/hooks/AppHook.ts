@@ -2,14 +2,6 @@ import { useState, useReducer } from 'react';
 import { AppHookData, Technology, FormState, FormAction, SendFormEvent } from '../types/AppHookTypes';
 
 const useAppHook = (): AppHookData => {
-    const h1Title = "React Training";
-    const h1Style = {
-        color: "black",
-        fontSize: "3.3rem",
-    };
-    const boxPosition = 2;
-    const img = 'react';
-
     const [technologies, setTechnologies] = useState([
         {
             id: 0,
@@ -102,7 +94,7 @@ const useAppHook = (): AppHookData => {
         { src: '/nike_3.jpg', alt: 'Nike 6' },
     ];
 
-    return { h1Title, h1Style, boxPosition, img, technologies, addTechnology, removeTechnology, formData, handleInputChange, resetForm, sendForm, carouselImages };
+    return { technologies, addTechnology, removeTechnology, formData, handleInputChange, resetForm, sendForm, carouselImages };
 }
 
 export default useAppHook;

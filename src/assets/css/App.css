@@ -2,19 +2,6 @@
   padding-top: 90px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
 .carousel-inner img {
   width: 100%;
   height: 37.5rem;
@@ -23,22 +10,6 @@
 }
 .carousel-item:hover img {
   filter: brightness(1);
-}
-
-.box {
-  background-color: #588157;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  cursor: pointer;
-}
-.box:hover {
-  background-color: #4a6c4f;
-}
-.rotated {
-  transform: rotate(2deg);
-}
-.h2-style {
-  font-size: 2.5rem;
-  color: #00D8FF;
 }
 
 @keyframes logo-spin {

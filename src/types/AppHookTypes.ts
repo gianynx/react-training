@@ -1,8 +1,4 @@
 export interface AppHookData {
-    h1Title: string;
-    h1Style: React.CSSProperties;
-    boxPosition: number;
-    img: string;
     technologies: Technology[];
     addTechnology: (newTechnology: Technology) => void;
     removeTechnology: (id: number) => void;

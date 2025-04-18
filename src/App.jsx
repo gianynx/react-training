@@ -5,12 +5,10 @@ import Card from './components/Card';
 import CardForm from './components/CardForm';
 import Footer from './components/Footer';
 import './assets/css/App.css';
-import reactLogo from '/react.svg';
-import viteLogo from '/vite.svg';
 
 function App() {
 
-  const { h1Title, h1Style, boxPosition, img, technologies, addTechnology, removeTechnology, formData, handleInputChange, resetForm, sendForm, carouselImages } = useAppHook();
+  const { technologies, addTechnology, removeTechnology, formData, handleInputChange, resetForm, sendForm, carouselImages } = useAppHook();
 
   return (
     <>
@@ -26,25 +24,7 @@ function App() {
 
           <div className="container">
             <section id="box-section">
-              <div className="d-flex justify-content-evenly align-items-center mt-5 p-3">
-                <div className={`box rounded-5 p-4 ${boxPosition > 1 ? "rotated" : ""}`}>
-                  <div className="d-flex align-items-center">
-                    <div>
-                      <h1 style={h1Style}>{h1Title}</h1>
-                      <h2 className="h2-style">Full-time Course</h2>
-                    </div>
-                    <img src={`/${img}.svg`} alt="React logo" className="mx-3" style={{ height: "100px" }} />
-                  </div>
-                </div>
-                <div>
-                  <a href="https://vite.dev" target="_blank">
-                    <img src={viteLogo} className="vite logo" alt="Vite logo" style={{ height: "10rem" }} />
-                  </a>
-                  <a href="https://react.dev" target="_blank">
-                    <img src={reactLogo} className="logo react" alt="React logo" style={{ height: "10rem" }} />
-                  </a>
-                </div>
-              </div>
+
             </section>
 
             <section id="technologies-section">
