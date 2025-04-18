@@ -85,16 +85,17 @@ const useAppHook = (): AppHookData => {
         console.log("Form submitted: ", formData);
     };
 
-    const carouselImages = [
-        { src: '/nike_1.jpg', alt: 'Nike 1' },
-        { src: '/nike_2.jpg', alt: 'Nike 2' },
-        { src: '/nike_3.jpg', alt: 'Nike 3' },
-        { src: '/nike_3.jpg', alt: 'Nike 4' },
-        { src: '/nike_3.jpg', alt: 'Nike 5' },
-        { src: '/nike_3.jpg', alt: 'Nike 6' },
+    const carouselMedia = [
+        { type: 'video', src: '/videos/nike_1_video.mp4', alt: 'first_video' },
+        { type: 'image', src: '/images/nike_1.jpg', alt: 'first_slide' },
+        { type: 'image', src: '/images/nike_2.jpg', alt: 'second_slide' },
+        { type: 'image', src: '/images/nike_3.jpg', alt: 'third_slide' },
+        { type: 'image', src: '/images/nike_4.jpg', alt: 'fourth_slide' },
+        { type: 'image', src: '/images/nike_5.jpg', alt: 'fifth_slide' },
+        { type: 'image', src: '/images/nike_6.jpg', alt: 'sixth_slide' },
     ];
 
-    return { technologies, addTechnology, removeTechnology, formData, handleInputChange, resetForm, sendForm, carouselImages };
+    return { technologies, addTechnology, removeTechnology, formData, handleInputChange, resetForm, sendForm, carouselMedia };
 }
 
 export default useAppHook;
