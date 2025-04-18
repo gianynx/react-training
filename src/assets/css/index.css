@@ -8,9 +8,9 @@
 body {
   min-height: 100vh;
   background: linear-gradient(to bottom, #ffffff 0%,#dce0e2 36%,#28343b 100%) !important;
-  font-family: "Roboto Condensed", sans-serif !important;
+  font-family: "Anton", sans-serif !important;
   font-optical-sizing: auto !important;
-  font-weight: 500 !important;
+  font-weight: 400 !important;
   font-style: normal !important;
 }
 
