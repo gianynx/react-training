@@ -21,6 +21,9 @@
   filter: brightness(0.8);
   transition: filter 0.3s ease;
 }
+.carousel-item:hover img {
+  filter: brightness(1);
+}
 
 .box {
   background-color: #588157;
