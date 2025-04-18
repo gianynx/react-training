@@ -2,6 +2,13 @@
   padding-top: 90px;
 }
 
+#promotional-section div {
+  height: 35vh;
+}
+.promo-title {
+  font-size: 4rem;
+}
+
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);

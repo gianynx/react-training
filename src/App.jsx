@@ -22,14 +22,19 @@ function App() {
             <Carousel media={carouselMedia} />
           </section>
 
+          <section id="promotional-section">
+            <div className="d-flex flex-column justify-content-center align-items-center bg-dark text-white p-2">
+              <div className="d-flex flex-column justify-content-center align-items-center text-uppercase fw-bold promo-title">
+                <span>massima ammortizzazione:</span>
+                <span>grande comfort, grandi corse</span>
+              </div>
+              <span className="fs-5">Scopri le nuove colorway di Vomero 18.</span>
+            </div>
+          </section>
+
           <div className="container">
-            <section id="box-section">
-
-            </section>
-
             <section id="technologies-section">
               <div className="p-4">
-                <hr />
                 <h2 className="text-center mt-5">Technologies</h2>
                 <div className="d-flex justify-content-center gap-3 mt-5">
                   <CardForm addTechnology={addTechnology} />
