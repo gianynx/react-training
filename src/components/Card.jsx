@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Toast from './Toast';
 import '../assets/css/Card.css';
 
-function Card({ id, title, imgSrc, children, isPopular, removeTechnology }) {
+function Card({ id, imgSrc, title, children, isPopular, removeTechnology }) {
 
     const [showToast, setShowToast] = useState(false);
 
