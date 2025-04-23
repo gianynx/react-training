@@ -2,6 +2,29 @@ import { useState, useReducer } from 'react';
 import { AppHookData, Technology, FormState, FormAction, SendFormEvent } from '../types/AppHookTypes';
 
 const useAppHook = (): AppHookData => {
+    const [products, setProducts] = useState([
+        {
+            id: 0,
+            title: "Nike Dunk Low",
+            imgSrc: "/images/dunk_1.jpg",
+        },
+        {
+            id: 1,
+            title: "Nike Dunk Low Next nature",
+            imgSrc: "/images/dunk_2.jpg",
+        },
+        {
+            id: 2,
+            title: "Nike Dunk Low Retro",
+            imgSrc: "/images/dunk_3.jpg",
+        },
+        {
+            id: 3,
+            title: "Nike Dunk Low Retro SE",
+            imgSrc: "/images/dunk_4.jpg",
+        },
+    ]);
+
     const [technologies, setTechnologies] = useState([
         {
             id: 0,
@@ -45,15 +68,15 @@ const useAppHook = (): AppHookData => {
             isPopular: false,
             description: "Ada is a programming language developed in the late 1970s by the US Department of Defense.",
         },
-    ])
+    ]);
 
     const addTechnology = (newTechnology: Technology): void => {
         setTechnologies([newTechnology, ...technologies]);
-    }
+    };
 
     const removeTechnology = (id: number): void => {
         setTechnologies(technologies.filter((technology) => technology.id !== id));
-    }
+    };
 
     const formReducer = (state: FormState, action: FormAction): FormState => {
         switch (action.type) {
