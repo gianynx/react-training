@@ -34,6 +34,14 @@ function App() {
             </a>
           </section>
 
+          <div className="container-fluid">
+            <section id="product-grid">
+              <div className="p-5">
+                <span>Scopri i nostri prodotti</span>
+              </div>
+            </section>
+          </div>
+
           <div className="container">
             <section id="technologies-section">
               <div className="p-4">
