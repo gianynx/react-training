@@ -1,7 +1,7 @@
 import useAppHook from './hooks/AppHook';
 import Header from './components/Header';
 import Carousel from './components/Carousel';
-import Card from './components/Card';
+import CardText from './components/CardText';
 import CardForm from './components/CardForm';
 import Footer from './components/Footer';
 import './assets/css/App.css';
@@ -51,9 +51,9 @@ function App() {
                 </div>
                 <div className="d-flex justify-content-center flex-wrap gap-5 mt-5 mb-2">
                   {technologies.map((tech) => (
-                    <Card key={tech.id} id={tech.id} imgSrc={tech.imgSrc} title={tech.title} isPopular={tech.isPopular} removeTechnology={removeTechnology}>
+                    <CardText key={tech.id} id={tech.id} imgSrc={tech.imgSrc} title={tech.title} isPopular={tech.isPopular} removeTechnology={removeTechnology}>
                       {tech.description}
-                    </Card>
+                    </CardText>
                   ))}
                 </div>
               </div>
@@ -67,9 +67,9 @@ function App() {
                   {technologies
                     .filter((tech) => tech.isPopular)
                     .map((tech) => (
-                      <Card key={tech.id} imgSrc={tech.imgSrc} title={tech.title} isPopular={tech.isPopular}>
+                      <CardText key={tech.id} imgSrc={tech.imgSrc} title={tech.title} isPopular={tech.isPopular}>
                         {tech.description}
-                      </Card>
+                      </CardText>
                     ))}
                 </div>
               </div>
