@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 import Toast from './Toast';
-import '../assets/css/Card.css';
+import '../assets/css/CardText.css';
 
-function Card({ id, imgSrc, title, children, isPopular, removeTechnology }) {
+function CardText({ id, imgSrc, title, children, isPopular, removeTechnology }) {
 
     const [showToast, setShowToast] = useState(false);
 
@@ -40,7 +40,7 @@ function Card({ id, imgSrc, title, children, isPopular, removeTechnology }) {
 }
 
 // Prop type validation
-Card.propTypes = {
+CardText.propTypes = {
     id: PropTypes.number,
     title: PropTypes.string.isRequired,
     imgSrc: PropTypes.string.isRequired,
@@ -49,4 +49,4 @@ Card.propTypes = {
     removeTechnology: PropTypes.func,
 };
 
-export default Card;
+export default CardText;
