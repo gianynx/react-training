@@ -3,12 +3,13 @@ import Header from './components/Header';
 import Carousel from './components/Carousel';
 import CardText from './components/CardText';
 import CardForm from './components/CardForm';
+import CardImage from './components/CardImage';
 import Footer from './components/Footer';
 import './assets/css/App.css';
 
 function App() {
 
-  const { technologies, addTechnology, removeTechnology, formData, handleInputChange, resetForm, sendForm, carouselMedia } = useAppHook();
+  const { technologies, addTechnology, removeTechnology, formData, handleInputChange, resetForm, sendForm, carouselMedia, products } = useAppHook();
 
   return (
     <>
@@ -36,14 +37,16 @@ function App() {
 
           <div className="container-fluid">
             <section id="product-grid">
-              <div className="p-5">
-                <span>Scopri i nostri prodotti</span>
+              <div className="d-flex justify-content-center align-items-center flex-wrap gap-3 mt-5 mb-5">
+                {products.map((product) => (
+                  <CardImage key={product.id} id={product.id} imgTitle={product.imgTitle} imgSrc={product.imgSrc} />
+                ))}
               </div>
             </section>
           </div>
 
           <div className="container">
-            <section id="technologies-section">
+            {/* <section id="technologies-section">
               <div className="p-4">
                 <h2 className="text-center mt-5">Technologies</h2>
                 <div className="d-flex justify-content-center gap-3 mt-5">
@@ -73,7 +76,7 @@ function App() {
                     ))}
                 </div>
               </div>
-            </section>
+            </section> */}
 
             <section id="newsletter-form-section">
               <hr />
