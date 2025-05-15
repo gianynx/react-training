@@ -2,29 +2,6 @@ import { useState, useReducer } from 'react';
 import { AppHookData, Technology, FormState, FormAction, SendFormEvent } from '../types/AppHookTypes';
 
 const useAppHook = (): AppHookData => {
-    const [products, setProducts] = useState([
-        {
-            id: 0,
-            title: "Nike Dunk Low",
-            imgSrc: "/images/dunk_1.jpg",
-        },
-        {
-            id: 1,
-            title: "Nike Dunk Low Next nature",
-            imgSrc: "/images/dunk_2.jpg",
-        },
-        {
-            id: 2,
-            title: "Nike Dunk Low Retro",
-            imgSrc: "/images/dunk_3.jpg",
-        },
-        {
-            id: 3,
-            title: "Nike Dunk Low Retro SE",
-            imgSrc: "/images/dunk_4.jpg",
-        },
-    ]);
-
     const [technologies, setTechnologies] = useState([
         {
             id: 0,
@@ -118,7 +95,30 @@ const useAppHook = (): AppHookData => {
         { type: 'image', src: '/images/nike_6.jpg', alt: 'sixth_slide' },
     ];
 
-    return { technologies, addTechnology, removeTechnology, formData, handleInputChange, resetForm, sendForm, carouselMedia };
+    const products = [
+        {
+            id: 0,
+            imgTitle: "Nike Dunk Low",
+            imgSrc: "/images/dunk_1.jpg",
+        },
+        {
+            id: 1,
+            imgTitle: "Nike Dunk Low Next nature",
+            imgSrc: "/images/dunk_2.jpg",
+        },
+        {
+            id: 2,
+            imgTitle: "Nike Dunk Low Retro",
+            imgSrc: "/images/dunk_3.jpg",
+        },
+        {
+            id: 3,
+            imgTitle: "Nike Dunk Low Retro SE",
+            imgSrc: "/images/dunk_4.jpg",
+        },
+    ];
+
+    return { technologies, addTechnology, removeTechnology, formData, handleInputChange, resetForm, sendForm, carouselMedia, products };
 }
 
 export default useAppHook;
