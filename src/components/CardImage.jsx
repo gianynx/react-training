@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
+import '../assets/css/CardImage.css';
 
 function CardImage({ imgSrc, imgTitle }) {
     return (
-        <div className="card" style={{ width: "46rem", overflow: "hidden" }}>
+        <div className="card card-img-container">
             <a href="/">
-                <img src={imgSrc} alt={imgTitle} className="img-fluid" style={{ width: "100%", height: "28rem", objectFit: "cover" }} />
+                <img src={imgSrc} alt={imgTitle} className="card-img-custom" />
             </a>
         </div>
     );
