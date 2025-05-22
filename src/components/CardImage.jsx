@@ -5,8 +5,9 @@ function CardImage({ imgSrc, imgTitle }) {
     return (
         <a href="/" className="card card-img-container">
             <img src={imgSrc} alt={imgTitle} className="card-img-custom" />
-            <div className="card-img-overlay">
-                <h4 className="card-title text-center pt-4">{imgTitle}</h4>
+            <div className="card-img-overlay d-flex justify-content-between align-items-baseline p-5">
+                <h4 className="card-title text-center">{imgTitle}</h4>
+                <button type="button" className="btn btn-outline-dark">Acquista</button>
             </div>
         </a>
     );
