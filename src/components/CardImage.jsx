@@ -7,6 +7,9 @@ function CardImage({ imgSrc, imgTitle }) {
             <a href="/">
                 <img src={imgSrc} alt={imgTitle} className="card-img-custom" />
             </a>
+            <div className="card-img-overlay">
+                <h4 className="card-title text-center pt-4">{imgTitle}</h4>
+            </div>
         </div>
     );
 }
