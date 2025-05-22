@@ -3,14 +3,12 @@ import '../assets/css/CardImage.css';
 
 function CardImage({ imgSrc, imgTitle }) {
     return (
-        <div className="card card-img-container">
-            <a href="/">
-                <img src={imgSrc} alt={imgTitle} className="card-img-custom" />
-            </a>
+        <a href="/" className="card card-img-container">
+            <img src={imgSrc} alt={imgTitle} className="card-img-custom" />
             <div className="card-img-overlay">
                 <h4 className="card-title text-center pt-4">{imgTitle}</h4>
             </div>
-        </div>
+        </a>
     );
 }
 
