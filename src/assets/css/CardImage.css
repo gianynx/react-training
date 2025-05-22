@@ -1,6 +1,7 @@
 .card-img-container {
     width: 46rem;
     overflow: hidden;
+    --bs-card-border-radius: none !important;
 }
 
 .card-img-custom {
