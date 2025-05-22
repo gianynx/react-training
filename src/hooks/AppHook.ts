@@ -95,7 +95,7 @@ const useAppHook = (): AppHookData => {
         { type: 'image', src: '/images/nike_6.jpg', alt: 'sixth_slide' },
     ];
 
-    const products = [
+    const productsNikeDunk = [
         {
             id: 0,
             imgTitle: "Nike Dunk Low",
@@ -118,7 +118,25 @@ const useAppHook = (): AppHookData => {
         },
     ];
 
-    return { technologies, addTechnology, removeTechnology, formData, handleInputChange, resetForm, sendForm, carouselMedia, products };
+    const productsNikeJordan = [
+        {
+            id: 0,
+            imgTitle: "Luka 4 Gone Fishing",
+            imgSrc: "/images/jordan_1.jpg",
+        },
+        {
+            id: 1,
+            imgTitle: "Air Jordan 1 Mid",
+            imgSrc: "/images/jordan_2.jpg",
+        },
+        {
+            id: 2,
+            imgTitle: "Air Jordan 4 White Cement",
+            imgSrc: "/images/jordan_3.jpg",
+        },
+    ];
+
+    return { technologies, addTechnology, removeTechnology, formData, handleInputChange, resetForm, sendForm, carouselMedia, productsNikeDunk, productsNikeJordan };
 }
 
 export default useAppHook;

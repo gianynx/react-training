@@ -9,7 +9,7 @@ import './assets/css/App.css';
 
 function App() {
 
-  const { technologies, addTechnology, removeTechnology, formData, handleInputChange, resetForm, sendForm, carouselMedia, products } = useAppHook();
+  const { technologies, addTechnology, removeTechnology, formData, handleInputChange, resetForm, sendForm, carouselMedia, productsNikeDunk, productsNikeJordan } = useAppHook();
 
   return (
     <>
@@ -36,9 +36,17 @@ function App() {
           </section>
 
           <div className="container-fluid">
-            <section id="product-grid">
+            <section id="products-nike-dunk-grid">
               <div className="d-flex justify-content-center align-items-center flex-wrap gap-3 mt-5 mb-5">
-                {products.map((product) => (
+                {productsNikeDunk.map((product) => (
+                  <CardImage key={product.id} id={product.id} imgTitle={product.imgTitle} imgSrc={product.imgSrc} />
+                ))}
+              </div>
+            </section>
+
+            <section id="products-nike-jordan-grid">
+              <div className="d-flex justify-content-center align-items-center gap-3 mt-5 mb-5">
+                {productsNikeJordan.map((product) => (
                   <CardImage key={product.id} id={product.id} imgTitle={product.imgTitle} imgSrc={product.imgSrc} />
                 ))}
               </div>

@@ -7,7 +7,8 @@ export interface AppHookData {
     resetForm: () => void;
     sendForm: (e: SendFormEvent) => void;
     carouselMedia: { src: string; alt: string }[];
-    products: { id: number; imgTitle: string; imgSrc: string }[];
+    productsNikeDunk: { id: number; imgTitle: string; imgSrc: string }[];
+    productsNikeJordan: { id: number; imgTitle: string; imgSrc: string }[];
 }
 
 export interface Technology {
