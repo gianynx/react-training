@@ -2,8 +2,10 @@ import PropTypes from 'prop-types';
 
 function CardImage({ imgSrc, imgTitle }) {
     return (
-        <div className="card" style={{ width: "44rem" }}>
-            <img src={imgSrc} alt={imgTitle} className="img-fluid" style={{ height: "27rem", objectFit: "cover" }} />
+        <div className="card" style={{ width: "46rem", overflow: "hidden" }}>
+            <a href="/">
+                <img src={imgSrc} alt={imgTitle} className="img-fluid" style={{ width: "100%", height: "28rem", objectFit: "cover" }} />
+            </a>
         </div>
     );
 }
