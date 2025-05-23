@@ -87,34 +87,34 @@ const useAppHook = (): AppHookData => {
 
     const carouselMedia = [
         { type: 'video', src: '/videos/nike_1_video.mp4', alt: 'first_video' },
-        { type: 'image', src: '/images/nike_1.jpg', alt: 'first_slide' },
-        { type: 'image', src: '/images/nike_2.jpg', alt: 'second_slide' },
-        { type: 'image', src: '/images/nike_3.jpg', alt: 'third_slide' },
-        { type: 'image', src: '/images/nike_4.jpg', alt: 'fourth_slide' },
-        { type: 'image', src: '/images/nike_5.jpg', alt: 'fifth_slide' },
-        { type: 'image', src: '/images/nike_6.jpg', alt: 'sixth_slide' },
+        { type: 'image', src: '/images/nike/nike_1.jpg', alt: 'first_slide' },
+        { type: 'image', src: '/images/nike/nike_2.jpg', alt: 'second_slide' },
+        { type: 'image', src: '/images/nike/nike_3.jpg', alt: 'third_slide' },
+        { type: 'image', src: '/images/nike/nike_4.jpg', alt: 'fourth_slide' },
+        { type: 'image', src: '/images/nike/nike_5.jpg', alt: 'fifth_slide' },
+        { type: 'image', src: '/images/nike/nike_6.jpg', alt: 'sixth_slide' },
     ];
 
     const productsNikeDunk = [
         {
             id: 0,
             imgTitle: "Nike Dunk Low",
-            imgSrc: "/images/dunk_1.jpg",
+            imgSrc: "/images/dunk/dunk_1.jpg",
         },
         {
             id: 1,
             imgTitle: "Nike Dunk Low Next nature",
-            imgSrc: "/images/dunk_2.jpg",
+            imgSrc: "/images/dunk/dunk_2.jpg",
         },
         {
             id: 2,
             imgTitle: "Nike Dunk Low Retro",
-            imgSrc: "/images/dunk_3.jpg",
+            imgSrc: "/images/dunk/dunk_3.jpg",
         },
         {
             id: 3,
             imgTitle: "Nike Dunk Low Retro SE",
-            imgSrc: "/images/dunk_4.jpg",
+            imgSrc: "/images/dunk/dunk_4.jpg",
         },
     ];
 
@@ -122,17 +122,17 @@ const useAppHook = (): AppHookData => {
         {
             id: 0,
             imgTitle: "Luka 4 Gone Fishing",
-            imgSrc: "/images/jordan_1.jpg",
+            imgSrc: "/images/jordan/jordan_1.jpg",
         },
         {
             id: 1,
             imgTitle: "Air Jordan 1 Mid",
-            imgSrc: "/images/jordan_2.jpg",
+            imgSrc: "/images/jordan/jordan_2.jpg",
         },
         {
             id: 2,
             imgTitle: "Air Jordan 4 White Cement",
-            imgSrc: "/images/jordan_3.jpg",
+            imgSrc: "/images/jordan/jordan_3.jpg",
         },
     ];
 
