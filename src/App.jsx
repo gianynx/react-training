@@ -51,6 +51,12 @@ function App() {
                 ))}
               </div>
             </section>
+
+            <section id="kylian-mbappe-section">
+              <div className="mt-4 mb-5">
+                <CardImage imgSrc="/images/kylian_mbappe.jpg" imgTitle="Kylian Mbappé" imgSubTitle="La selezione dell'atleta" isFullWidth isCustomLayout />
+              </div>
+            </section>
           </div>
 
           <div className="container">
