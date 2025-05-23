@@ -37,7 +37,7 @@ function App() {
 
           <div className="container-fluid">
             <section id="products-nike-dunk-grid">
-              <div className="d-flex justify-content-center align-items-center flex-wrap gap-3 mt-5 mb-5">
+              <div className="d-flex justify-content-center align-items-center flex-wrap gap-3 mt-5 mb-4">
                 {productsNikeDunk.map((product) => (
                   <CardImage key={product.id} id={product.id} imgTitle={product.imgTitle} imgSrc={product.imgSrc} />
                 ))}
@@ -45,7 +45,7 @@ function App() {
             </section>
 
             <section id="products-nike-jordan-grid">
-              <div className="d-flex justify-content-center align-items-center gap-3 mt-5 mb-5">
+              <div className="d-flex gap-3 p-2">
                 {productsNikeJordan.map((product) => (
                   <CardImage key={product.id} id={product.id} imgTitle={product.imgTitle} imgSrc={product.imgSrc} />
                 ))}
