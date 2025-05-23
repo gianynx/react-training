@@ -88,7 +88,7 @@ function App() {
 
             <section id="newsletter-form-section">
               <hr />
-              <h2 className="text-center text-white mt-5">Subscribe to our newsletter</h2>
+              <h2 className="text-center mt-5">Subscribe to our newsletter</h2>
               <form className="rounded box-shadow mt-5 mb-5 p-3">
                 <div className="d-flex justify-content-center align-items-center gap-5">
                   <div className="mb-3">
