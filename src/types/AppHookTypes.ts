@@ -9,6 +9,7 @@ export interface AppHookData {
     carouselMedia: { src: string; alt: string }[];
     productsNikeDunk: { id: number; imgTitle: string; imgSrc: string }[];
     productsNikeJordan: { id: number; imgTitle: string; imgSrc: string }[];
+    iconsCarouselMedia: { src: string; alt: string }[];
 }
 
 export interface Technology {
