@@ -8,13 +8,19 @@ function CarouselCaption({ media }) {
                 <button type="button" data-bs-target="#manualCarousel" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#manualCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
                 <button type="button" data-bs-target="#manualCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#manualCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#manualCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#manualCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                <button type="button" data-bs-target="#manualCarousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                <button type="button" data-bs-target="#manualCarousel" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                <button type="button" data-bs-target="#manualCarousel" data-bs-slide-to="8" aria-label="Slide 9"></button>
             </div>
             <div className="carousel-inner">
                 {media.map((item, index) => (
                     <div key={item.src} className={`carousel-item ${index === 0 ? 'active' : ''}`}>
                         <img src={item.src} className="d-block object-fit-contain" alt={item.alt} />
                         <div className="carousel-caption d-none d-md-block">
-                            <h5>{item.title}</h5>
+                            <h5 className="text-body-secondary">{item.title}</h5>
                         </div>
                     </div>
                 ))}
