@@ -39,7 +39,7 @@ function App() {
             <section id="products-nike-dunk-grid">
               <div className="d-flex justify-content-center align-items-center flex-wrap gap-3 mt-5 mb-4">
                 {productsNikeDunk.map((product) => (
-                  <CardImage key={product.id} id={product.id} imgTitle={product.imgTitle} imgSrc={product.imgSrc} />
+                  <CardImage key={product.id} id={product.id} imgTitle={product.imgTitle} imgInfo={product.imgInfo} imgSrc={product.imgSrc} />
                 ))}
               </div>
             </section>
@@ -47,14 +47,14 @@ function App() {
             <section id="products-nike-jordan-grid">
               <div className="d-flex gap-3 p-2">
                 {productsNikeJordan.map((product) => (
-                  <CardImage key={product.id} id={product.id} imgTitle={product.imgTitle} imgSrc={product.imgSrc} />
+                  <CardImage key={product.id} id={product.id} imgTitle={product.imgTitle} imgInfo={product.imgInfo} imgSrc={product.imgSrc} />
                 ))}
               </div>
             </section>
 
             <section id="kylian-mbappe-section">
               <div className="mt-4 mb-5">
-                <CardImage imgSrc="/images/kylian_mbappe.jpg" imgTitle="Kylian Mbappé" imgSubTitle="La selezione dell'atleta" isFullWidth isCustomLayout />
+                <CardImage imgSrc="/images/kylian_mbappe.jpg" imgTitle="Kylian Mbappé" imgInfo="La selezione dell'atleta" isFullWidth isCustomLayout />
               </div>
             </section>
           </div>

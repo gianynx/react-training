@@ -99,11 +99,13 @@ const useAppHook = (): AppHookData => {
         {
             id: 0,
             imgTitle: "Nike Dunk Low",
+            imgInfo: "Best seller",
             imgSrc: "/images/dunk/dunk_1.jpg",
         },
         {
             id: 1,
             imgTitle: "Nike Dunk Low Next nature",
+            imgInfo: "Best seller",
             imgSrc: "/images/dunk/dunk_2.jpg",
         },
         {
@@ -127,6 +129,7 @@ const useAppHook = (): AppHookData => {
         {
             id: 1,
             imgTitle: "Air Jordan 1 Mid",
+            imgInfo: "Best seller",
             imgSrc: "/images/jordan/jordan_2.jpg",
         },
         {
