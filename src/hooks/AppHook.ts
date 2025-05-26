@@ -139,7 +139,19 @@ const useAppHook = (): AppHookData => {
         },
     ];
 
-    return { technologies, addTechnology, removeTechnology, formData, handleInputChange, resetForm, sendForm, carouselMedia, productsNikeDunk, productsNikeJordan };
+    const iconsCarouselMedia = [
+        { title: 'Air Jordan', src: '/images/icons/air_jordan_4_retro_white_cement.jpg', alt: 'first_slide' },
+        { title: 'Air Force 1', src: '/images/icons/nike_air_force.jpg', alt: 'second_slide' },
+        { title: 'Air Max', src: '/images/icons/nike_air_max_plus.jpg', alt: 'third_slide' },
+        { title: 'Metcon', src: '/images/icons/nike_free_metcon_6.jpg', alt: 'fourth_slide' },
+        { title: 'Mercurial', src: '/images/icons/nike_mercurial_vapor_16_elite.jpg', alt: 'fifth_slide' },
+        { title: 'P-6000', src: '/images/icons/nike_p_6000.jpg', alt: 'sixth_slide' },
+        { title: 'Pegasus', src: '/images/icons/nike_pegasus_41.jpg', alt: 'seventh_slide' },
+        { title: 'Shox', src: '/images/icons/nike_shox_tl.jpg', alt: 'eighth_slide' },
+        { title: 'Vomero', src: '/images/icons/nike_zoom_vomero_5_premium.jpg', alt: 'ninth_slide' },
+    ];
+
+    return { technologies, addTechnology, removeTechnology, formData, handleInputChange, resetForm, sendForm, carouselMedia, productsNikeDunk, productsNikeJordan, iconsCarouselMedia };
 }
 
 export default useAppHook;
