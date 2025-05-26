@@ -7,7 +7,7 @@ function CardImage({ imgSrc, imgTitle, imgInfo, isFullWidth, isCustomLayout }) {
             <img src={imgSrc} alt={imgTitle} className="card-img-custom" />
             <div className={`card-img-overlay d-flex ${isCustomLayout ? 'flex-column align-items-end p-4' : 'justify-content-between align-items-baseline p-5'}`}>
                 <h4 className="card-title">{imgTitle}</h4>
-                <h6>{imgInfo}</h6>
+                <h6 className="text-uppercase text-body-secondary">{imgInfo}</h6>
                 <button type="button" className="btn btn-outline-dark">Acquista</button>
             </div>
         </a>
