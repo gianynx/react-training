@@ -1,15 +1,16 @@
 import useAppHook from './hooks/AppHook';
 import Header from './components/Header';
-import Carousel from './components/Carousel';
+import AutoCarousel from './components/AutoCarousel';
 import CardText from './components/CardText';
 import CardForm from './components/CardForm';
 import CardImage from './components/CardImage';
+import CarouselCaption from './components/CarouselCaption';
 import Footer from './components/Footer';
 import './assets/css/App.css';
 
 function App() {
 
-  const { technologies, addTechnology, removeTechnology, formData, handleInputChange, resetForm, sendForm, carouselMedia, productsNikeDunk, productsNikeJordan } = useAppHook();
+  const { technologies, addTechnology, removeTechnology, formData, handleInputChange, resetForm, sendForm, carouselMedia, productsNikeDunk, productsNikeJordan, iconsCarouselMedia } = useAppHook();
 
   return (
     <>
@@ -20,7 +21,7 @@ function App() {
       <div id="content-app">
         <main>
           <section id="carousel-section">
-            <Carousel media={carouselMedia} />
+            <AutoCarousel media={carouselMedia} />
           </section>
 
           <section id="promotional-section">
@@ -56,6 +57,10 @@ function App() {
               <div className="mt-4 mb-5">
                 <CardImage imgSrc="/images/kylian_mbappe.jpg" imgTitle="Kylian Mbappé" imgInfo="La selezione dell'atleta" isFullWidth isCustomLayout />
               </div>
+            </section>
+
+            <section id="icons-carousel-section">
+              <CarouselCaption media={iconsCarouselMedia} />
             </section>
           </div>
 
