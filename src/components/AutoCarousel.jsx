@@ -6,7 +6,7 @@ function Carousel({ media }) {
     return (
         <div className="d-flex justify-content-center align-items-center">
             <div className="carousel slide carousel-fade vw-100" data-bs-ride="carousel">
-                <div className="carousel-inner">
+                <div className="carousel-inner auto-carousel">
                     {media.map((item, index) => (
                         <div key={item.src} className={`carousel-item ${index === 0 ? 'active' : ''}`}>
                             {item.type === 'video' ? (
