@@ -64,6 +64,7 @@ function App() {
                 <h3 className="text-center text-uppercase mb-4">acquista le nostre icone</h3>
                 <CarouselCaption media={iconsCarouselMedia} />
               </div>
+              <hr />
             </section>
           </div>
 
@@ -130,7 +131,9 @@ function App() {
         </main>
 
         <footer>
-          <Footer />
+          <div className="mt-5 mb-5">
+            <Footer />
+          </div>
         </footer>
       </div>
     </>
