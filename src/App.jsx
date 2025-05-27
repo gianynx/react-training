@@ -67,8 +67,8 @@ function App() {
             </section>
           </div>
 
-          <div className="container">
-            {/* <section id="technologies-section">
+          {/* <div className="container">
+            <section id="technologies-section">
               <div className="p-4">
                 <h2 className="text-center mt-5">Technologies</h2>
                 <div className="d-flex justify-content-center gap-3 mt-5">
@@ -98,7 +98,7 @@ function App() {
                     ))}
                 </div>
               </div>
-            </section> */}
+            </section>
 
             <section id="newsletter-form-section">
               <hr />
@@ -126,7 +126,7 @@ function App() {
                 </div>
               </form>
             </section>
-          </div>
+          </div> */}
         </main>
 
         <footer>
