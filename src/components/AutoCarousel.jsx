@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import '../assets/css/Carousel.css';
+import '../assets/css/AutoCarousel.css';
 
 function Carousel({ media }) {
 
