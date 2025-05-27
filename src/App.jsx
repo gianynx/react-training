@@ -60,7 +60,7 @@ function App() {
             </section>
 
             <section id="icons-carousel-section">
-              <h3 className="text-center mb-4">Acquista le nostre icone</h3>
+              <h3 className="text-center text-uppercase mb-4">Acquista le nostre icone</h3>
               <CarouselCaption media={iconsCarouselMedia} />
             </section>
           </div>
