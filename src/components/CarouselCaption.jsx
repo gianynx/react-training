@@ -18,7 +18,9 @@ function CarouselCaption({ media }) {
             <div className="carousel-inner">
                 {media.map((item, index) => (
                     <div key={item.src} className={`carousel-item ${index === 0 ? 'active' : ''}`}>
-                        <img src={item.src} className="d-block object-fit-cover mx-auto w-75" alt={item.alt} />
+                        <a href="/">
+                            <img src={item.src} className="d-block object-fit-cover mx-auto w-75" alt={item.alt} />
+                        </a>
                         <div className="carousel-caption d-none d-md-block">
                             <h5 className="text-body-secondary">{item.title}</h5>
                         </div>
