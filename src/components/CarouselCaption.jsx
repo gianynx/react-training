@@ -1,13 +1,14 @@
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBackward, faForward } from '@fortawesome/free-solid-svg-icons';
+import '../assets/css/CarouselCaption.css';
 
 function CarouselCaption({ media }) {
 
     return (
         <div id="manualCarousel" className="carousel slide">
             <div className="carousel-indicators">
-                <button type="button" data-bs-target="#manualCarousel" data-bs-slide-to="0" className="active px-2" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#manualCarousel" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1" className="active px-2"></button>
                 <button type="button" data-bs-target="#manualCarousel" data-bs-slide-to="1" aria-label="Slide 2" className="px-2"></button>
                 <button type="button" data-bs-target="#manualCarousel" data-bs-slide-to="2" aria-label="Slide 3" className="px-2"></button>
                 <button type="button" data-bs-target="#manualCarousel" data-bs-slide-to="3" aria-label="Slide 4" className="px-2"></button>
