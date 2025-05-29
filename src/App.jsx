@@ -2,7 +2,7 @@ import useAppHook from './hooks/AppHook';
 import Header from './components/Header';
 import AutoCarousel from './components/AutoCarousel';
 import CardText from './components/CardText';
-import CardForm from './components/CardForm';
+import CardForm from './components/old/CardForm';
 import CardImage from './components/CardImage';
 import CarouselCaption from './components/CarouselCaption';
 import Footer from './components/Footer';

@@ -1,6 +1,6 @@
-import useCardFormHook from '../hooks/CardFormHook';
+import useCardFormHook from '../../hooks/old/CardFormHook';
 import PropTypes from 'prop-types';
-import '../assets/css/CardForm.css';
+import '../../assets/css/old/CardForm.css';
 
 function CardForm({ addTechnology }) {
 

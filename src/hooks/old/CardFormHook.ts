@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Technology } from '../types/AppHookTypes';
+import { Technology } from '../../types/AppHookTypes';
 
 const useCardFormHook = (addTechnology: (newTechnology: Technology) => void) => {
     const [formData, setFormData] = useState({
